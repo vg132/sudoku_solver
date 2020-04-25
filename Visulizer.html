@@ -1,0 +1,1668 @@
+<html>
+	<head>
+		<link rel="stylesheet" href="https://www.sudoku-solutions.com/styles/reset.css" type="text/css" media="screen" />
+		<link rel="stylesheet" type="text/css" media="screen" href="https://www.sudoku-solutions.com/styles/basic.css" />
+
+		<link rel="stylesheet" href="https://www.sudoku-solutions.com/styles/sudoku.desktop.grid.css?version=1.22" type="text/css" />
+		<link rel="stylesheet" href="https://www.sudoku-solutions.com/styles/sudoku.desktop.css?version=1.25" type="text/css" />
+		<link rel="stylesheet" href="https://www.sudoku-solutions.com/styles/sudokuPrint.v1.css?version=1.01" type="text/css" />
+		<link rel="stylesheet" href="https://www.sudoku-solutions.com/3rdparty/tipsy/jquery.tipsy.css" type="text/css" />
+	</head>
+	<body>
+		<script src="https://code.jquery.com/jquery-3.5.0.min.js" integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ=" crossorigin="anonymous"></script>
+
+		<div style="float: left;">
+			<div id="grid" data-gridorder="9">
+				<div style="clear: both;"></div>
+				<div class="gridRow" align="center">
+					<div class="gridCell border gl gt cell" id="C1" tabindex="1" data-row="1" data-column="1" data-box="1" data-neighbour-above-id="73" data-neighbour-below-id="10" data-neighbour-left-id="81" data-neighbour-right-id="2" data-posted="N">
+						<div id="C1_INPUT_CONTAINER" class="gridCellInputContainer" style="display: none;">
+							<div class="gridCellValue"></div>
+						</div>
+						<div id="C1_CANDIDATE_CONTAINER" class="gridCellCandidateContainer" style="display: block;">
+							<div class="gridCellCandidate" id="C1_1" data-content="1" tabindex="-1"></div>
+							<div class="gridCellCandidate" id="C1_2" data-content="2" tabindex="-1"></div>
+							<div class="gridCellCandidate" id="C1_3" data-content="3" tabindex="-1"></div>
+							<div style="clear: both;"></div>
+							<div class="gridCellCandidate" id="C1_4" data-content="4" tabindex="-1">4</div>
+							<div class="gridCellCandidate" id="C1_5" data-content="5" tabindex="-1">5</div>
+							<div class="gridCellCandidate" id="C1_6" data-content="6" tabindex="-1"></div>
+							<div style="clear: both;"></div>
+							<div class="gridCellCandidate" id="C1_7" data-content="7" tabindex="-1">7</div>
+							<div class="gridCellCandidate" id="C1_8" data-content="8" tabindex="-1">8</div>
+							<div class="gridCellCandidate" id="C1_9" data-content="9" tabindex="-1"></div>
+							<div style="clear: both;"></div>
+						</div>
+					</div>
+					<div class="gridCell border cl gt cell" id="C2" tabindex="2" data-row="1" data-column="2" data-box="1" data-neighbour-above-id="74" data-neighbour-below-id="11" data-neighbour-left-id="1" data-neighbour-right-id="3" data-posted="N">
+						<div id="C2_INPUT_CONTAINER" class="gridCellInputContainer" style="display: none;">
+							<div class="gridCellValue"></div>
+						</div>
+						<div id="C2_CANDIDATE_CONTAINER" class="gridCellCandidateContainer" style="display: block;">
+							<div class="gridCellCandidate" id="C2_1" data-content="1" tabindex="-1"></div>
+							<div class="gridCellCandidate" id="C2_2" data-content="2" tabindex="-1"></div>
+							<div class="gridCellCandidate" id="C2_3" data-content="3" tabindex="-1"></div>
+							<div style="clear: both;"></div>
+							<div class="gridCellCandidate" id="C2_4" data-content="4" tabindex="-1">4</div>
+							<div class="gridCellCandidate" id="C2_5" data-content="5" tabindex="-1">5</div>
+							<div class="gridCellCandidate" id="C2_6" data-content="6" tabindex="-1"></div>
+							<div style="clear: both;"></div>
+							<div class="gridCellCandidate" id="C2_7" data-content="7" tabindex="-1">7</div>
+							<div class="gridCellCandidate" id="C2_8" data-content="8" tabindex="-1"></div>
+							<div class="gridCellCandidate" id="C2_9" data-content="9" tabindex="-1"></div>
+							<div style="clear: both;"></div>
+						</div>
+					</div>
+					<div class="gridCell border cl gt inputcell" id="C3" tabindex="3" data-row="1" data-column="3" data-box="1" data-neighbour-above-id="75" data-neighbour-below-id="12" data-neighbour-left-id="2" data-neighbour-right-id="4" data-posted="Y">
+						<div id="C3_INPUT_CONTAINER" class="gridCellInputContainer" style="display: block;">
+							<div class="gridCellValue">1</div>
+						</div>
+						<div id="C3_CANDIDATE_CONTAINER" class="gridCellCandidateContainer" style="display: none;">
+							<div class="gridCellCandidate" id="C3_1" data-content="1" tabindex="-1"></div>
+							<div class="gridCellCandidate" id="C3_2" data-content="2" tabindex="-1"></div>
+							<div class="gridCellCandidate" id="C3_3" data-content="3" tabindex="-1"></div>
+							<div style="clear: both;"></div>
+							<div class="gridCellCandidate" id="C3_4" data-content="4" tabindex="-1"></div>
+							<div class="gridCellCandidate" id="C3_5" data-content="5" tabindex="-1"></div>
+							<div class="gridCellCandidate" id="C3_6" data-content="6" tabindex="-1"></div>
+							<div style="clear: both;"></div>
+							<div class="gridCellCandidate" id="C3_7" data-content="7" tabindex="-1"></div>
+							<div class="gridCellCandidate" id="C3_8" data-content="8" tabindex="-1"></div>
+							<div class="gridCellCandidate" id="C3_9" data-content="9" tabindex="-1"></div>
+							<div style="clear: both;"></div>
+						</div>
+					</div>
+					<div class="gridCell border bl gt inputcell" id="C4" tabindex="4" data-row="1" data-column="4" data-box="2" data-neighbour-above-id="76" data-neighbour-below-id="13" data-neighbour-left-id="3" data-neighbour-right-id="5" data-posted="Y">
+						<div id="C4_INPUT_CONTAINER" class="gridCellInputContainer" style="display: block;">
+							<div class="gridCellValue">2</div>
+						</div>
+						<div id="C4_CANDIDATE_CONTAINER" class="gridCellCandidateContainer" style="display: none;">
+							<div class="gridCellCandidate" id="C4_1" data-content="1" tabindex="-1"></div>
+							<div class="gridCellCandidate" id="C4_2" data-content="2" tabindex="-1">2</div>
+							<div class="gridCellCandidate" id="C4_3" data-content="3" tabindex="-1"></div>
+							<div style="clear: both;"></div>
+							<div class="gridCellCandidate" id="C4_4" data-content="4" tabindex="-1"></div>
+							<div class="gridCellCandidate" id="C4_5" data-content="5" tabindex="-1"></div>
+							<div class="gridCellCandidate" id="C4_6" data-content="6" tabindex="-1"></div>
+							<div style="clear: both;"></div>
+							<div class="gridCellCandidate" id="C4_7" data-content="7" tabindex="-1"></div>
+							<div class="gridCellCandidate" id="C4_8" data-content="8" tabindex="-1"></div>
+							<div class="gridCellCandidate" id="C4_9" data-content="9" tabindex="-1"></div>
+							<div style="clear: both;"></div>
+						</div>
+					</div>
+					<div class="gridCell border cl gt inputcell" id="C5" tabindex="5" data-row="1" data-column="5" data-box="2" data-neighbour-above-id="77" data-neighbour-below-id="14" data-neighbour-left-id="4" data-neighbour-right-id="6" data-posted="Y">
+						<div id="C5_INPUT_CONTAINER" class="gridCellInputContainer" style="display: block;">
+							<div class="gridCellValue">9</div>
+						</div>
+						<div id="C5_CANDIDATE_CONTAINER" class="gridCellCandidateContainer" style="display: none;">
+							<div class="gridCellCandidate" id="C5_1" data-content="1" tabindex="-1"></div>
+							<div class="gridCellCandidate" id="C5_2" data-content="2" tabindex="-1"></div>
+							<div class="gridCellCandidate" id="C5_3" data-content="3" tabindex="-1"></div>
+							<div style="clear: both;"></div>
+							<div class="gridCellCandidate" id="C5_4" data-content="4" tabindex="-1"></div>
+							<div class="gridCellCandidate" id="C5_5" data-content="5" tabindex="-1"></div>
+							<div class="gridCellCandidate" id="C5_6" data-content="6" tabindex="-1"></div>
+							<div style="clear: both;"></div>
+							<div class="gridCellCandidate" id="C5_7" data-content="7" tabindex="-1"></div>
+							<div class="gridCellCandidate" id="C5_8" data-content="8" tabindex="-1"></div>
+							<div class="gridCellCandidate" id="C5_9" data-content="9" tabindex="-1"></div>
+							<div style="clear: both;"></div>
+						</div>
+					</div>
+					<div class="gridCell border cl gt inputcell" id="C6" tabindex="6" data-row="1" data-column="6" data-box="2" data-neighbour-above-id="78" data-neighbour-below-id="15" data-neighbour-left-id="5" data-neighbour-right-id="7" data-posted="Y">
+						<div id="C6_INPUT_CONTAINER" class="gridCellInputContainer" style="display: block;">
+							<div class="gridCellValue">3</div>
+						</div>
+						<div id="C6_CANDIDATE_CONTAINER" class="gridCellCandidateContainer" style="display: none;">
+							<div class="gridCellCandidate" id="C6_1" data-content="1" tabindex="-1"></div>
+							<div class="gridCellCandidate" id="C6_2" data-content="2" tabindex="-1"></div>
+							<div class="gridCellCandidate" id="C6_3" data-content="3" tabindex="-1"></div>
+							<div style="clear: both;"></div>
+							<div class="gridCellCandidate" id="C6_4" data-content="4" tabindex="-1"></div>
+							<div class="gridCellCandidate" id="C6_5" data-content="5" tabindex="-1"></div>
+							<div class="gridCellCandidate" id="C6_6" data-content="6" tabindex="-1"></div>
+							<div style="clear: both;"></div>
+							<div class="gridCellCandidate" id="C6_7" data-content="7" tabindex="-1"></div>
+							<div class="gridCellCandidate" id="C6_8" data-content="8" tabindex="-1"></div>
+							<div class="gridCellCandidate" id="C6_9" data-content="9" tabindex="-1"></div>
+							<div style="clear: both;"></div>
+						</div>
+					</div>
+					<div class="gridCell border bl gt cell" id="C7" tabindex="7" data-row="1" data-column="7" data-box="3" data-neighbour-above-id="79" data-neighbour-below-id="16" data-neighbour-left-id="6" data-neighbour-right-id="8" data-posted="N">
+						<div id="C7_INPUT_CONTAINER" class="gridCellInputContainer" style="display: none;">
+							<div class="gridCellValue"></div>
+						</div>
+						<div id="C7_CANDIDATE_CONTAINER" class="gridCellCandidateContainer" style="display: block;">
+							<div class="gridCellCandidate" id="C7_1" data-content="1" tabindex="-1"></div>
+							<div class="gridCellCandidate" id="C7_2" data-content="2" tabindex="-1"></div>
+							<div class="gridCellCandidate" id="C7_3" data-content="3" tabindex="-1"></div>
+							<div style="clear: both;"></div>
+							<div class="gridCellCandidate" id="C7_4" data-content="4" tabindex="-1">4</div>
+							<div class="gridCellCandidate" id="C7_5" data-content="5" tabindex="-1">5</div>
+							<div class="gridCellCandidate" id="C7_6" data-content="6" tabindex="-1"></div>
+							<div style="clear: both;"></div>
+							<div class="gridCellCandidate" id="C7_7" data-content="7" tabindex="-1"></div>
+							<div class="gridCellCandidate" id="C7_8" data-content="8" tabindex="-1"></div>
+							<div class="gridCellCandidate" id="C7_9" data-content="9" tabindex="-1"></div>
+							<div style="clear: both;"></div>
+						</div>
+					</div>
+					<div class="gridCell border cl gt cell" id="C8" tabindex="8" data-row="1" data-column="8" data-box="3" data-neighbour-above-id="80" data-neighbour-below-id="17" data-neighbour-left-id="7" data-neighbour-right-id="9" data-posted="N">
+						<div id="C8_INPUT_CONTAINER" class="gridCellInputContainer" style="display: none;">
+							<div class="gridCellValue"></div>
+						</div>
+						<div id="C8_CANDIDATE_CONTAINER" class="gridCellCandidateContainer" style="display: block;">
+							<div class="gridCellCandidate" id="C8_1" data-content="1" tabindex="-1"></div>
+							<div class="gridCellCandidate" id="C8_2" data-content="2" tabindex="-1"></div>
+							<div class="gridCellCandidate" id="C8_3" data-content="3" tabindex="-1"></div>
+							<div style="clear: both;"></div>
+							<div class="gridCellCandidate" id="C8_4" data-content="4" tabindex="-1">4</div>
+							<div class="gridCellCandidate" id="C8_5" data-content="5" tabindex="-1"></div>
+							<div class="gridCellCandidate" id="C8_6" data-content="6" tabindex="-1"></div>
+							<div style="clear: both;"></div>
+							<div class="gridCellCandidate" id="C8_7" data-content="7" tabindex="-1"></div>
+							<div class="gridCellCandidate" id="C8_8" data-content="8" tabindex="-1">8</div>
+							<div class="gridCellCandidate" id="C8_9" data-content="9" tabindex="-1"></div>
+							<div style="clear: both;"></div>
+						</div>
+					</div>
+					<div class="gridCell border cl gr gt inputcell" id="C9" tabindex="9" data-row="1" data-column="9" data-box="3" data-neighbour-above-id="81" data-neighbour-below-id="18" data-neighbour-left-id="8" data-neighbour-right-id="10" data-posted="Y">
+						<div id="C9_INPUT_CONTAINER" class="gridCellInputContainer" style="display: block;">
+							<div class="gridCellValue">6</div>
+						</div>
+						<div id="C9_CANDIDATE_CONTAINER" class="gridCellCandidateContainer" style="display: none;">
+							<div class="gridCellCandidate" id="C9_1" data-content="1" tabindex="-1"></div>
+							<div class="gridCellCandidate" id="C9_2" data-content="2" tabindex="-1"></div>
+							<div class="gridCellCandidate" id="C9_3" data-content="3" tabindex="-1"></div>
+							<div style="clear: both;"></div>
+							<div class="gridCellCandidate" id="C9_4" data-content="4" tabindex="-1"></div>
+							<div class="gridCellCandidate" id="C9_5" data-content="5" tabindex="-1"></div>
+							<div class="gridCellCandidate" id="C9_6" data-content="6" tabindex="-1"></div>
+							<div style="clear: both;"></div>
+							<div class="gridCellCandidate" id="C9_7" data-content="7" tabindex="-1"></div>
+							<div class="gridCellCandidate" id="C9_8" data-content="8" tabindex="-1"></div>
+							<div class="gridCellCandidate" id="C9_9" data-content="9" tabindex="-1"></div>
+							<div style="clear: both;"></div>
+						</div>
+					</div>
+				</div>
+				<div style="clear: both;"></div>
+				<div class="gridRow" align="center">
+					<div class="gridCell border gl ct cell" id="C10" tabindex="10" data-row="2" data-column="1" data-box="1" data-neighbour-above-id="1" data-neighbour-below-id="19" data-neighbour-left-id="9" data-neighbour-right-id="11" data-posted="N">
+						<div id="C10_INPUT_CONTAINER" class="gridCellInputContainer" style="display: none;">
+							<div class="gridCellValue"></div>
+						</div>
+						<div id="C10_CANDIDATE_CONTAINER" class="gridCellCandidateContainer" style="display: block;">
+							<div class="gridCellCandidate" id="C10_1" data-content="1" tabindex="-1"></div>
+							<div class="gridCellCandidate" id="C10_2" data-content="2" tabindex="-1"></div>
+							<div class="gridCellCandidate" id="C10_3" data-content="3" tabindex="-1"></div>
+							<div style="clear: both;"></div>
+							<div class="gridCellCandidate" id="C10_4" data-content="4" tabindex="-1">4</div>
+							<div class="gridCellCandidate" id="C10_5" data-content="5" tabindex="-1">5</div>
+							<div class="gridCellCandidate" id="C10_6" data-content="6" tabindex="-1"></div>
+							<div style="clear: both;"></div>
+							<div class="gridCellCandidate" id="C10_7" data-content="7" tabindex="-1"></div>
+							<div class="gridCellCandidate" id="C10_8" data-content="8" tabindex="-1">8</div>
+							<div class="gridCellCandidate" id="C10_9" data-content="9" tabindex="-1"></div>
+							<div style="clear: both;"></div>
+						</div>
+					</div>
+					<div class="gridCell border cl ct inputcell" id="C11" tabindex="11" data-row="2" data-column="2" data-box="1" data-neighbour-above-id="2" data-neighbour-below-id="20" data-neighbour-left-id="10" data-neighbour-right-id="12" data-posted="Y">
+						<div id="C11_INPUT_CONTAINER" class="gridCellInputContainer" style="display: block;">
+							<div class="gridCellValue">2</div>
+						</div>
+
+						<div id="C11_CANDIDATE_CONTAINER" class="gridCellCandidateContainer" style="display: none;">
+							<div class="gridCellCandidate" id="C11_1" data-content="1" tabindex="-1"></div>
+							<div class="gridCellCandidate" id="C11_2" data-content="2" tabindex="-1"></div>
+							<div class="gridCellCandidate" id="C11_3" data-content="3" tabindex="-1"></div>
+							<div style="clear: both;"></div>
+							<div class="gridCellCandidate" id="C11_4" data-content="4" tabindex="-1"></div>
+							<div class="gridCellCandidate" id="C11_5" data-content="5" tabindex="-1"></div>
+							<div class="gridCellCandidate" id="C11_6" data-content="6" tabindex="-1"></div>
+							<div style="clear: both;"></div>
+							<div class="gridCellCandidate" id="C11_7" data-content="7" tabindex="-1"></div>
+							<div class="gridCellCandidate" id="C11_8" data-content="8" tabindex="-1"></div>
+							<div class="gridCellCandidate" id="C11_9" data-content="9" tabindex="-1"></div>
+							<div style="clear: both;"></div>
+						</div>
+					</div>
+					<div class="gridCell border cl ct inputcell" id="C12" tabindex="12" data-row="2" data-column="3" data-box="1" data-neighbour-above-id="3" data-neighbour-below-id="21" data-neighbour-left-id="11" data-neighbour-right-id="13" data-posted="Y">
+						<div id="C12_INPUT_CONTAINER" class="gridCellInputContainer" style="display: block;">
+							<div class="gridCellValue">3</div>
+						</div>
+
+						<div id="C12_CANDIDATE_CONTAINER" class="gridCellCandidateContainer" style="display: none;">
+							<div class="gridCellCandidate" id="C12_1" data-content="1" tabindex="-1"></div>
+							<div class="gridCellCandidate" id="C12_2" data-content="2" tabindex="-1"></div>
+							<div class="gridCellCandidate" id="C12_3" data-content="3" tabindex="-1"></div>
+							<div style="clear: both;"></div>
+							<div class="gridCellCandidate" id="C12_4" data-content="4" tabindex="-1"></div>
+							<div class="gridCellCandidate" id="C12_5" data-content="5" tabindex="-1"></div>
+							<div class="gridCellCandidate" id="C12_6" data-content="6" tabindex="-1"></div>
+							<div style="clear: both;"></div>
+							<div class="gridCellCandidate" id="C12_7" data-content="7" tabindex="-1"></div>
+							<div class="gridCellCandidate" id="C12_8" data-content="8" tabindex="-1"></div>
+							<div class="gridCellCandidate" id="C12_9" data-content="9" tabindex="-1"></div>
+							<div style="clear: both;"></div>
+						</div>
+					</div>
+					<div class="gridCell border bl ct inputcell" id="C13" tabindex="13" data-row="2" data-column="4" data-box="2" data-neighbour-above-id="4" data-neighbour-below-id="22" data-neighbour-left-id="12" data-neighbour-right-id="14" data-posted="Y">
+						<div id="C13_INPUT_CONTAINER" class="gridCellInputContainer" style="display: block;">
+							<div class="gridCellValue">6</div>
+						</div>
+
+						<div id="C13_CANDIDATE_CONTAINER" class="gridCellCandidateContainer" style="display: none;">
+							<div class="gridCellCandidate" id="C13_1" data-content="1" tabindex="-1"></div>
+							<div class="gridCellCandidate" id="C13_2" data-content="2" tabindex="-1"></div>
+							<div class="gridCellCandidate" id="C13_3" data-content="3" tabindex="-1"></div>
+							<div style="clear: both;"></div>
+							<div class="gridCellCandidate" id="C13_4" data-content="4" tabindex="-1"></div>
+							<div class="gridCellCandidate" id="C13_5" data-content="5" tabindex="-1"></div>
+							<div class="gridCellCandidate" id="C13_6" data-content="6" tabindex="-1"></div>
+							<div style="clear: both;"></div>
+							<div class="gridCellCandidate" id="C13_7" data-content="7" tabindex="-1"></div>
+							<div class="gridCellCandidate" id="C13_8" data-content="8" tabindex="-1"></div>
+							<div class="gridCellCandidate" id="C13_9" data-content="9" tabindex="-1"></div>
+							<div style="clear: both;"></div>
+						</div>
+					</div>
+					<div class="gridCell border cl ct inputcell" id="C14" tabindex="14" data-row="2" data-column="5" data-box="2" data-neighbour-above-id="5" data-neighbour-below-id="23" data-neighbour-left-id="13" data-neighbour-right-id="15" data-posted="Y">
+						<div id="C14_INPUT_CONTAINER" class="gridCellInputContainer" style="display: block;">
+							<div class="gridCellValue">1</div>
+						</div>
+
+						<div id="C14_CANDIDATE_CONTAINER" class="gridCellCandidateContainer" style="display: none;">
+							<div class="gridCellCandidate" id="C14_1" data-content="1" tabindex="-1"></div>
+							<div class="gridCellCandidate" id="C14_2" data-content="2" tabindex="-1"></div>
+							<div class="gridCellCandidate" id="C14_3" data-content="3" tabindex="-1"></div>
+							<div style="clear: both;"></div>
+							<div class="gridCellCandidate" id="C14_4" data-content="4" tabindex="-1"></div>
+							<div class="gridCellCandidate" id="C14_5" data-content="5" tabindex="-1"></div>
+							<div class="gridCellCandidate" id="C14_6" data-content="6" tabindex="-1"></div>
+							<div style="clear: both;"></div>
+							<div class="gridCellCandidate" id="C14_7" data-content="7" tabindex="-1"></div>
+							<div class="gridCellCandidate" id="C14_8" data-content="8" tabindex="-1"></div>
+							<div class="gridCellCandidate" id="C14_9" data-content="9" tabindex="-1"></div>
+							<div style="clear: both;"></div>
+						</div>
+					</div>
+					<div class="gridCell border cl ct cell" id="C15" tabindex="15" data-row="2" data-column="6" data-box="2" data-neighbour-above-id="6" data-neighbour-below-id="24" data-neighbour-left-id="14" data-neighbour-right-id="16" data-posted="N">
+						<div id="C15_INPUT_CONTAINER" class="gridCellInputContainer" style="display: none;">
+							<div class="gridCellValue"></div>
+						</div>
+
+						<div id="C15_CANDIDATE_CONTAINER" class="gridCellCandidateContainer" style="display: block;">
+							<div class="gridCellCandidate" id="C15_1" data-content="1" tabindex="-1"></div>
+							<div class="gridCellCandidate" id="C15_2" data-content="2" tabindex="-1"></div>
+							<div class="gridCellCandidate" id="C15_3" data-content="3" tabindex="-1"></div>
+							<div style="clear: both;"></div>
+							<div class="gridCellCandidate" id="C15_4" data-content="4" tabindex="-1">4</div>
+							<div class="gridCellCandidate" id="C15_5" data-content="5" tabindex="-1">5</div>
+							<div class="gridCellCandidate" id="C15_6" data-content="6" tabindex="-1"></div>
+							<div style="clear: both;"></div>
+							<div class="gridCellCandidate" id="C15_7" data-content="7" tabindex="-1"></div>
+							<div class="gridCellCandidate" id="C15_8" data-content="8" tabindex="-1">8</div>
+							<div class="gridCellCandidate" id="C15_9" data-content="9" tabindex="-1"></div>
+							<div style="clear: both;"></div>
+						</div>
+					</div>
+					<div class="gridCell border bl ct cell" id="C16" tabindex="16" data-row="2" data-column="7" data-box="3" data-neighbour-above-id="7" data-neighbour-below-id="25" data-neighbour-left-id="15" data-neighbour-right-id="17" data-posted="N">
+						<div id="C16_INPUT_CONTAINER" class="gridCellInputContainer" style="display: none;">
+							<div class="gridCellValue"></div>
+						</div>
+
+						<div id="C16_CANDIDATE_CONTAINER" class="gridCellCandidateContainer" style="display: block;">
+							<div class="gridCellCandidate" id="C16_1" data-content="1" tabindex="-1"></div>
+							<div class="gridCellCandidate" id="C16_2" data-content="2" tabindex="-1"></div>
+							<div class="gridCellCandidate" id="C16_3" data-content="3" tabindex="-1"></div>
+							<div style="clear: both;"></div>
+							<div class="gridCellCandidate" id="C16_4" data-content="4" tabindex="-1">4</div>
+							<div class="gridCellCandidate" id="C16_5" data-content="5" tabindex="-1">5</div>
+							<div class="gridCellCandidate" id="C16_6" data-content="6" tabindex="-1"></div>
+							<div style="clear: both;"></div>
+							<div class="gridCellCandidate" id="C16_7" data-content="7" tabindex="-1"></div>
+							<div class="gridCellCandidate" id="C16_8" data-content="8" tabindex="-1"></div>
+							<div class="gridCellCandidate" id="C16_9" data-content="9" tabindex="-1">9</div>
+							<div style="clear: both;"></div>
+						</div>
+					</div>
+					<div class="gridCell border cl ct inputcell" id="C17" tabindex="17" data-row="2" data-column="8" data-box="3" data-neighbour-above-id="8" data-neighbour-below-id="26" data-neighbour-left-id="16" data-neighbour-right-id="18" data-posted="Y">
+						<div id="C17_INPUT_CONTAINER" class="gridCellInputContainer" style="display: block;">
+							<div class="gridCellValue">7</div>
+						</div>
+
+						<div id="C17_CANDIDATE_CONTAINER" class="gridCellCandidateContainer" style="display: none;">
+							<div class="gridCellCandidate" id="C17_1" data-content="1" tabindex="-1"></div>
+							<div class="gridCellCandidate" id="C17_2" data-content="2" tabindex="-1"></div>
+							<div class="gridCellCandidate" id="C17_3" data-content="3" tabindex="-1"></div>
+							<div style="clear: both;"></div>
+							<div class="gridCellCandidate" id="C17_4" data-content="4" tabindex="-1"></div>
+							<div class="gridCellCandidate" id="C17_5" data-content="5" tabindex="-1"></div>
+							<div class="gridCellCandidate" id="C17_6" data-content="6" tabindex="-1"></div>
+							<div style="clear: both;"></div>
+							<div class="gridCellCandidate" id="C17_7" data-content="7" tabindex="-1"></div>
+							<div class="gridCellCandidate" id="C17_8" data-content="8" tabindex="-1"></div>
+							<div class="gridCellCandidate" id="C17_9" data-content="9" tabindex="-1"></div>
+							<div style="clear: both;"></div>
+						</div>
+					</div>
+					<div class="gridCell border cl gr ct cell" id="C18" tabindex="18" data-row="2" data-column="9" data-box="3" data-neighbour-above-id="9" data-neighbour-below-id="27" data-neighbour-left-id="17" data-neighbour-right-id="19" data-posted="N">
+						<div id="C18_INPUT_CONTAINER" class="gridCellInputContainer" style="display: none;">
+							<div class="gridCellValue"></div>
+						</div>
+
+						<div id="C18_CANDIDATE_CONTAINER" class="gridCellCandidateContainer" style="display: block;">
+							<div class="gridCellCandidate" id="C18_1" data-content="1" tabindex="-1"></div>
+							<div class="gridCellCandidate" id="C18_2" data-content="2" tabindex="-1"></div>
+							<div class="gridCellCandidate" id="C18_3" data-content="3" tabindex="-1"></div>
+							<div style="clear: both;"></div>
+							<div class="gridCellCandidate" id="C18_4" data-content="4" tabindex="-1"></div>
+							<div class="gridCellCandidate" id="C18_5" data-content="5" tabindex="-1">5</div>
+							<div class="gridCellCandidate" id="C18_6" data-content="6" tabindex="-1"></div>
+							<div style="clear: both;"></div>
+							<div class="gridCellCandidate" id="C18_7" data-content="7" tabindex="-1"></div>
+							<div class="gridCellCandidate" id="C18_8" data-content="8" tabindex="-1">8</div>
+							<div class="gridCellCandidate" id="C18_9" data-content="9" tabindex="-1">9</div>
+							<div style="clear: both;"></div>
+						</div>
+					</div>
+				</div>
+				<div style="clear: both;"></div>
+				<div class="gridRow" align="center">
+					<div class="gridCell border gl ct cell" id="C19" tabindex="19" data-row="3" data-column="1" data-box="1" data-neighbour-above-id="10" data-neighbour-below-id="28" data-neighbour-left-id="18" data-neighbour-right-id="20" data-posted="N">
+						<div id="C19_INPUT_CONTAINER" class="gridCellInputContainer" style="display: none;">
+							<div class="gridCellValue"></div>
+						</div>
+
+						<div id="C19_CANDIDATE_CONTAINER" class="gridCellCandidateContainer" style="display: block;">
+							<div class="gridCellCandidate" id="C19_1" data-content="1" tabindex="-1"></div>
+							<div class="gridCellCandidate" id="C19_2" data-content="2" tabindex="-1"></div>
+							<div class="gridCellCandidate" id="C19_3" data-content="3" tabindex="-1"></div>
+							<div style="clear: both;"></div>
+							<div class="gridCellCandidate" id="C19_4" data-content="4" tabindex="-1">4</div>
+							<div class="gridCellCandidate" id="C19_5" data-content="5" tabindex="-1">5</div>
+							<div class="gridCellCandidate" id="C19_6" data-content="6" tabindex="-1">6</div>
+							<div style="clear: both;"></div>
+							<div class="gridCellCandidate" id="C19_7" data-content="7" tabindex="-1">7</div>
+							<div class="gridCellCandidate" id="C19_8" data-content="8" tabindex="-1">8</div>
+							<div class="gridCellCandidate" id="C19_9" data-content="9" tabindex="-1"></div>
+							<div style="clear: both;"></div>
+						</div>
+					</div>
+					<div class="gridCell border cl ct cell" id="C20" tabindex="20" data-row="3" data-column="2" data-box="1" data-neighbour-above-id="11" data-neighbour-below-id="29" data-neighbour-left-id="19" data-neighbour-right-id="21" data-posted="N">
+						<div id="C20_INPUT_CONTAINER" class="gridCellInputContainer" style="display: none;">
+							<div class="gridCellValue"></div>
+						</div>
+
+						<div id="C20_CANDIDATE_CONTAINER" class="gridCellCandidateContainer" style="display: block;">
+							<div class="gridCellCandidate" id="C20_1" data-content="1" tabindex="-1"></div>
+							<div class="gridCellCandidate" id="C20_2" data-content="2" tabindex="-1"></div>
+							<div class="gridCellCandidate" id="C20_3" data-content="3" tabindex="-1"></div>
+							<div style="clear: both;"></div>
+							<div class="gridCellCandidate" id="C20_4" data-content="4" tabindex="-1">4</div>
+							<div class="gridCellCandidate" id="C20_5" data-content="5" tabindex="-1">5</div>
+							<div class="gridCellCandidate" id="C20_6" data-content="6" tabindex="-1">6</div>
+							<div style="clear: both;"></div>
+							<div class="gridCellCandidate" id="C20_7" data-content="7" tabindex="-1">7</div>
+							<div class="gridCellCandidate" id="C20_8" data-content="8" tabindex="-1"></div>
+							<div class="gridCellCandidate" id="C20_9" data-content="9" tabindex="-1"></div>
+							<div style="clear: both;"></div>
+						</div>
+					</div>
+					<div class="gridCell border cl ct cell" id="C21" tabindex="21" data-row="3" data-column="3" data-box="1" data-neighbour-above-id="12" data-neighbour-below-id="30" data-neighbour-left-id="20" data-neighbour-right-id="22" data-posted="N">
+						<div id="C21_INPUT_CONTAINER" class="gridCellInputContainer" style="display: none;">
+							<div class="gridCellValue"></div>
+						</div>
+
+						<div id="C21_CANDIDATE_CONTAINER" class="gridCellCandidateContainer" style="display: block;">
+							<div class="gridCellCandidate" id="C21_1" data-content="1" tabindex="-1"></div>
+							<div class="gridCellCandidate" id="C21_2" data-content="2" tabindex="-1"></div>
+							<div class="gridCellCandidate" id="C21_3" data-content="3" tabindex="-1"></div>
+							<div style="clear: both;"></div>
+							<div class="gridCellCandidate" id="C21_4" data-content="4" tabindex="-1">4</div>
+							<div class="gridCellCandidate" id="C21_5" data-content="5" tabindex="-1"></div>
+							<div class="gridCellCandidate" id="C21_6" data-content="6" tabindex="-1">6</div>
+							<div style="clear: both;"></div>
+							<div class="gridCellCandidate" id="C21_7" data-content="7" tabindex="-1">7</div>
+							<div class="gridCellCandidate" id="C21_8" data-content="8" tabindex="-1">8</div>
+							<div class="gridCellCandidate" id="C21_9" data-content="9" tabindex="-1">9</div>
+							<div style="clear: both;"></div>
+						</div>
+					</div>
+					<div class="gridCell border bl ct cell" id="C22" tabindex="22" data-row="3" data-column="4" data-box="2" data-neighbour-above-id="13" data-neighbour-below-id="31" data-neighbour-left-id="21" data-neighbour-right-id="23" data-posted="N">
+						<div id="C22_INPUT_CONTAINER" class="gridCellInputContainer" style="display: none;">
+							<div class="gridCellValue"></div>
+						</div>
+
+						<div id="C22_CANDIDATE_CONTAINER" class="gridCellCandidateContainer" style="display: block;">
+							<div class="gridCellCandidate" id="C22_1" data-content="1" tabindex="-1"></div>
+							<div class="gridCellCandidate" id="C22_2" data-content="2" tabindex="-1"></div>
+							<div class="gridCellCandidate" id="C22_3" data-content="3" tabindex="-1"></div>
+							<div style="clear: both;"></div>
+							<div class="gridCellCandidate" id="C22_4" data-content="4" tabindex="-1"></div>
+							<div class="gridCellCandidate" id="C22_5" data-content="5" tabindex="-1">5</div>
+							<div class="gridCellCandidate" id="C22_6" data-content="6" tabindex="-1"></div>
+							<div style="clear: both;"></div>
+							<div class="gridCellCandidate" id="C22_7" data-content="7" tabindex="-1">7</div>
+							<div class="gridCellCandidate" id="C22_8" data-content="8" tabindex="-1">8</div>
+							<div class="gridCellCandidate" id="C22_9" data-content="9" tabindex="-1"></div>
+							<div style="clear: both;"></div>
+						</div>
+					</div>
+					<div class="gridCell border cl ct cell" id="C23" tabindex="23" data-row="3" data-column="5" data-box="2" data-neighbour-above-id="14" data-neighbour-below-id="32" data-neighbour-left-id="22" data-neighbour-right-id="24" data-posted="N">
+						<div id="C23_INPUT_CONTAINER" class="gridCellInputContainer" style="display: none;">
+							<div class="gridCellValue"></div>
+						</div>
+
+						<div id="C23_CANDIDATE_CONTAINER" class="gridCellCandidateContainer" style="display: block;">
+							<div class="gridCellCandidate" id="C23_1" data-content="1" tabindex="-1"></div>
+							<div class="gridCellCandidate" id="C23_2" data-content="2" tabindex="-1"></div>
+							<div class="gridCellCandidate" id="C23_3" data-content="3" tabindex="-1"></div>
+							<div style="clear: both;"></div>
+							<div class="gridCellCandidate" id="C23_4" data-content="4" tabindex="-1">4</div>
+							<div class="gridCellCandidate" id="C23_5" data-content="5" tabindex="-1"></div>
+							<div class="gridCellCandidate" id="C23_6" data-content="6" tabindex="-1"></div>
+							<div style="clear: both;"></div>
+							<div class="gridCellCandidate" id="C23_7" data-content="7" tabindex="-1">7</div>
+							<div class="gridCellCandidate" id="C23_8" data-content="8" tabindex="-1"></div>
+							<div class="gridCellCandidate" id="C23_9" data-content="9" tabindex="-1"></div>
+							<div style="clear: both;"></div>
+						</div>
+					</div>
+					<div class="gridCell border cl ct cell" id="C24" tabindex="24" data-row="3" data-column="6" data-box="2" data-neighbour-above-id="15" data-neighbour-below-id="33" data-neighbour-left-id="23" data-neighbour-right-id="25" data-posted="N">
+						<div id="C24_INPUT_CONTAINER" class="gridCellInputContainer" style="display: none;">
+							<div class="gridCellValue"></div>
+						</div>
+
+						<div id="C24_CANDIDATE_CONTAINER" class="gridCellCandidateContainer" style="display: block;">
+							<div class="gridCellCandidate" id="C24_1" data-content="1" tabindex="-1"></div>
+							<div class="gridCellCandidate" id="C24_2" data-content="2" tabindex="-1"></div>
+							<div class="gridCellCandidate" id="C24_3" data-content="3" tabindex="-1"></div>
+							<div style="clear: both;"></div>
+							<div class="gridCellCandidate" id="C24_4" data-content="4" tabindex="-1">4</div>
+							<div class="gridCellCandidate" id="C24_5" data-content="5" tabindex="-1">5</div>
+							<div class="gridCellCandidate" id="C24_6" data-content="6" tabindex="-1"></div>
+							<div style="clear: both;"></div>
+							<div class="gridCellCandidate" id="C24_7" data-content="7" tabindex="-1">7</div>
+							<div class="gridCellCandidate" id="C24_8" data-content="8" tabindex="-1">8</div>
+							<div class="gridCellCandidate" id="C24_9" data-content="9" tabindex="-1"></div>
+							<div style="clear: both;"></div>
+						</div>
+					</div>
+					<div class="gridCell border bl ct inputcell" id="C25" tabindex="25" data-row="3" data-column="7" data-box="3" data-neighbour-above-id="16" data-neighbour-below-id="34" data-neighbour-left-id="24" data-neighbour-right-id="26" data-posted="Y">
+						<div id="C25_INPUT_CONTAINER" class="gridCellInputContainer" style="display: block;">
+							<div class="gridCellValue">1</div>
+						</div>
+
+						<div id="C25_CANDIDATE_CONTAINER" class="gridCellCandidateContainer" style="display: none;">
+							<div class="gridCellCandidate" id="C25_1" data-content="1" tabindex="-1">1</div>
+							<div class="gridCellCandidate" id="C25_2" data-content="2" tabindex="-1"></div>
+							<div class="gridCellCandidate" id="C25_3" data-content="3" tabindex="-1"></div>
+							<div style="clear: both;"></div>
+							<div class="gridCellCandidate" id="C25_4" data-content="4" tabindex="-1"></div>
+							<div class="gridCellCandidate" id="C25_5" data-content="5" tabindex="-1"></div>
+							<div class="gridCellCandidate" id="C25_6" data-content="6" tabindex="-1"></div>
+							<div style="clear: both;"></div>
+							<div class="gridCellCandidate" id="C25_7" data-content="7" tabindex="-1"></div>
+							<div class="gridCellCandidate" id="C25_8" data-content="8" tabindex="-1"></div>
+							<div class="gridCellCandidate" id="C25_9" data-content="9" tabindex="-1"></div>
+							<div style="clear: both;"></div>
+						</div>
+					</div>
+					<div class="gridCell border cl ct inputcell" id="C26" tabindex="26" data-row="3" data-column="8" data-box="3" data-neighbour-above-id="17" data-neighbour-below-id="35" data-neighbour-left-id="25" data-neighbour-right-id="27" data-posted="Y">
+						<div id="C26_INPUT_CONTAINER" class="gridCellInputContainer" style="display: block;">
+							<div class="gridCellValue">2</div>
+						</div>
+
+						<div id="C26_CANDIDATE_CONTAINER" class="gridCellCandidateContainer" style="display: none;">
+							<div class="gridCellCandidate" id="C26_1" data-content="1" tabindex="-1"></div>
+							<div class="gridCellCandidate" id="C26_2" data-content="2" tabindex="-1"></div>
+							<div class="gridCellCandidate" id="C26_3" data-content="3" tabindex="-1"></div>
+							<div style="clear: both;"></div>
+							<div class="gridCellCandidate" id="C26_4" data-content="4" tabindex="-1"></div>
+							<div class="gridCellCandidate" id="C26_5" data-content="5" tabindex="-1"></div>
+							<div class="gridCellCandidate" id="C26_6" data-content="6" tabindex="-1"></div>
+							<div style="clear: both;"></div>
+							<div class="gridCellCandidate" id="C26_7" data-content="7" tabindex="-1"></div>
+							<div class="gridCellCandidate" id="C26_8" data-content="8" tabindex="-1"></div>
+							<div class="gridCellCandidate" id="C26_9" data-content="9" tabindex="-1"></div>
+							<div style="clear: both;"></div>
+						</div>
+					</div>
+					<div class="gridCell border cl gr ct cell" id="C27" tabindex="27" data-row="3" data-column="9" data-box="3" data-neighbour-above-id="18" data-neighbour-below-id="36" data-neighbour-left-id="26" data-neighbour-right-id="28" data-posted="Y">
+						<div id="C27_INPUT_CONTAINER" class="gridCellInputContainer" style="display: block;">
+							<div class="gridCellValue">3</div>
+						</div>
+
+						<div id="C27_CANDIDATE_CONTAINER" class="gridCellCandidateContainer" style="display: none;">
+							<div class="gridCellCandidate" id="C27_1" data-content="1" tabindex="-1"></div>
+							<div class="gridCellCandidate" id="C27_2" data-content="2" tabindex="-1"></div>
+							<div class="gridCellCandidate" id="C27_3" data-content="3" tabindex="-1">3</div>
+							<div style="clear: both;"></div>
+							<div class="gridCellCandidate" id="C27_4" data-content="4" tabindex="-1"></div>
+							<div class="gridCellCandidate" id="C27_5" data-content="5" tabindex="-1"></div>
+							<div class="gridCellCandidate" id="C27_6" data-content="6" tabindex="-1"></div>
+							<div style="clear: both;"></div>
+							<div class="gridCellCandidate" id="C27_7" data-content="7" tabindex="-1"></div>
+							<div class="gridCellCandidate" id="C27_8" data-content="8" tabindex="-1"></div>
+							<div class="gridCellCandidate" id="C27_9" data-content="9" tabindex="-1"></div>
+							<div style="clear: both;"></div>
+						</div>
+					</div>
+				</div>
+				<div style="clear: both;"></div>
+				<div class="gridRow" align="center">
+					<div class="gridCell border gl bt inputcell" id="C28" tabindex="28" data-row="4" data-column="1" data-box="4" data-neighbour-above-id="19" data-neighbour-below-id="37" data-neighbour-left-id="27" data-neighbour-right-id="29" data-posted="Y">
+						<div id="C28_INPUT_CONTAINER" class="gridCellInputContainer" style="display: block;">
+							<div class="gridCellValue">9</div>
+						</div>
+
+						<div id="C28_CANDIDATE_CONTAINER" class="gridCellCandidateContainer" style="display: none;">
+							<div class="gridCellCandidate" id="C28_1" data-content="1" tabindex="-1"></div>
+							<div class="gridCellCandidate" id="C28_2" data-content="2" tabindex="-1"></div>
+							<div class="gridCellCandidate" id="C28_3" data-content="3" tabindex="-1"></div>
+							<div style="clear: both;"></div>
+							<div class="gridCellCandidate" id="C28_4" data-content="4" tabindex="-1"></div>
+							<div class="gridCellCandidate" id="C28_5" data-content="5" tabindex="-1"></div>
+							<div class="gridCellCandidate" id="C28_6" data-content="6" tabindex="-1"></div>
+							<div style="clear: both;"></div>
+							<div class="gridCellCandidate" id="C28_7" data-content="7" tabindex="-1"></div>
+							<div class="gridCellCandidate" id="C28_8" data-content="8" tabindex="-1"></div>
+							<div class="gridCellCandidate" id="C28_9" data-content="9" tabindex="-1"></div>
+							<div style="clear: both;"></div>
+						</div>
+					</div>
+					<div class="gridCell border cl bt cell" id="C29" tabindex="29" data-row="4" data-column="2" data-box="4" data-neighbour-above-id="20" data-neighbour-below-id="38" data-neighbour-left-id="28" data-neighbour-right-id="30" data-posted="N">
+						<div id="C29_INPUT_CONTAINER" class="gridCellInputContainer" style="display: none;">
+							<div class="gridCellValue"></div>
+						</div>
+
+						<div id="C29_CANDIDATE_CONTAINER" class="gridCellCandidateContainer" style="display: block;">
+							<div class="gridCellCandidate" id="C29_1" data-content="1" tabindex="-1">1</div>
+							<div class="gridCellCandidate" id="C29_2" data-content="2" tabindex="-1"></div>
+							<div class="gridCellCandidate" id="C29_3" data-content="3" tabindex="-1">3</div>
+							<div style="clear: both;"></div>
+							<div class="gridCellCandidate" id="C29_4" data-content="4" tabindex="-1">4</div>
+							<div class="gridCellCandidate" id="C29_5" data-content="5" tabindex="-1"></div>
+							<div class="gridCellCandidate" id="C29_6" data-content="6" tabindex="-1">6</div>
+							<div style="clear: both;"></div>
+							<div class="gridCellCandidate" id="C29_7" data-content="7" tabindex="-1">7</div>
+							<div class="gridCellCandidate" id="C29_8" data-content="8" tabindex="-1"></div>
+							<div class="gridCellCandidate" id="C29_9" data-content="9" tabindex="-1"></div>
+							<div style="clear: both;"></div>
+						</div>
+					</div>
+					<div class="gridCell border cl bt cell" id="C30" tabindex="30" data-row="4" data-column="3" data-box="4" data-neighbour-above-id="21" data-neighbour-below-id="39" data-neighbour-left-id="29" data-neighbour-right-id="31" data-posted="N">
+						<div id="C30_INPUT_CONTAINER" class="gridCellInputContainer" style="display: none;">
+							<div class="gridCellValue"></div>
+						</div>
+
+						<div id="C30_CANDIDATE_CONTAINER" class="gridCellCandidateContainer" style="display: block;">
+							<div class="gridCellCandidate" id="C30_1" data-content="1" tabindex="-1"></div>
+							<div class="gridCellCandidate" id="C30_2" data-content="2" tabindex="-1">2</div>
+							<div class="gridCellCandidate" id="C30_3" data-content="3" tabindex="-1"></div>
+							<div style="clear: both;"></div>
+							<div class="gridCellCandidate" id="C30_4" data-content="4" tabindex="-1">4</div>
+							<div class="gridCellCandidate" id="C30_5" data-content="5" tabindex="-1"></div>
+							<div class="gridCellCandidate" id="C30_6" data-content="6" tabindex="-1">6</div>
+							<div style="clear: both;"></div>
+							<div class="gridCellCandidate" id="C30_7" data-content="7" tabindex="-1">7</div>
+							<div class="gridCellCandidate" id="C30_8" data-content="8" tabindex="-1">8</div>
+							<div class="gridCellCandidate" id="C30_9" data-content="9" tabindex="-1"></div>
+							<div style="clear: both;"></div>
+						</div>
+					</div>
+					<div class="gridCell border bl bt cell" id="C31" tabindex="31" data-row="4" data-column="4" data-box="5" data-neighbour-above-id="22" data-neighbour-below-id="40" data-neighbour-left-id="30" data-neighbour-right-id="32" data-posted="N">
+						<div id="C31_INPUT_CONTAINER" class="gridCellInputContainer" style="display: none;">
+							<div class="gridCellValue"></div>
+						</div>
+
+						<div id="C31_CANDIDATE_CONTAINER" class="gridCellCandidateContainer" style="display: block;">
+							<div class="gridCellCandidate" id="C31_1" data-content="1" tabindex="-1"></div>
+							<div class="gridCellCandidate" id="C31_2" data-content="2" tabindex="-1"></div>
+							<div class="gridCellCandidate" id="C31_3" data-content="3" tabindex="-1"></div>
+							<div style="clear: both;"></div>
+							<div class="gridCellCandidate" id="C31_4" data-content="4" tabindex="-1"></div>
+							<div class="gridCellCandidate" id="C31_5" data-content="5" tabindex="-1">5</div>
+							<div class="gridCellCandidate" id="C31_6" data-content="6" tabindex="-1"></div>
+							<div style="clear: both;"></div>
+							<div class="gridCellCandidate" id="C31_7" data-content="7" tabindex="-1">7</div>
+							<div class="gridCellCandidate" id="C31_8" data-content="8" tabindex="-1">8</div>
+							<div class="gridCellCandidate" id="C31_9" data-content="9" tabindex="-1"></div>
+							<div style="clear: both;"></div>
+						</div>
+					</div>
+					<div class="gridCell border cl bt cell" id="C32" tabindex="32" data-row="4" data-column="5" data-box="5" data-neighbour-above-id="23" data-neighbour-below-id="41" data-neighbour-left-id="31" data-neighbour-right-id="33" data-posted="N">
+						<div id="C32_INPUT_CONTAINER" class="gridCellInputContainer" style="display: none;">
+							<div class="gridCellValue"></div>
+						</div>
+
+						<div id="C32_CANDIDATE_CONTAINER" class="gridCellCandidateContainer" style="display: block;">
+							<div class="gridCellCandidate" id="C32_1" data-content="1" tabindex="-1"></div>
+							<div class="gridCellCandidate" id="C32_2" data-content="2" tabindex="-1">2</div>
+							<div class="gridCellCandidate" id="C32_3" data-content="3" tabindex="-1"></div>
+							<div style="clear: both;"></div>
+							<div class="gridCellCandidate" id="C32_4" data-content="4" tabindex="-1">4</div>
+							<div class="gridCellCandidate" id="C32_5" data-content="5" tabindex="-1"></div>
+							<div class="gridCellCandidate" id="C32_6" data-content="6" tabindex="-1"></div>
+							<div style="clear: both;"></div>
+							<div class="gridCellCandidate" id="C32_7" data-content="7" tabindex="-1">7</div>
+							<div class="gridCellCandidate" id="C32_8" data-content="8" tabindex="-1"></div>
+							<div class="gridCellCandidate" id="C32_9" data-content="9" tabindex="-1"></div>
+							<div style="clear: both;"></div>
+						</div>
+					</div>
+					<div class="gridCell border cl bt cell" id="C33" tabindex="33" data-row="4" data-column="6" data-box="5" data-neighbour-above-id="24" data-neighbour-below-id="42" data-neighbour-left-id="32" data-neighbour-right-id="34" data-posted="N">
+						<div id="C33_INPUT_CONTAINER" class="gridCellInputContainer" style="display: none;">
+							<div class="gridCellValue"></div>
+						</div>
+
+						<div id="C33_CANDIDATE_CONTAINER" class="gridCellCandidateContainer" style="display: block;">
+							<div class="gridCellCandidate" id="C33_1" data-content="1" tabindex="-1"></div>
+							<div class="gridCellCandidate" id="C33_2" data-content="2" tabindex="-1">2</div>
+							<div class="gridCellCandidate" id="C33_3" data-content="3" tabindex="-1"></div>
+							<div style="clear: both;"></div>
+							<div class="gridCellCandidate" id="C33_4" data-content="4" tabindex="-1">4</div>
+							<div class="gridCellCandidate" id="C33_5" data-content="5" tabindex="-1">5</div>
+							<div class="gridCellCandidate" id="C33_6" data-content="6" tabindex="-1"></div>
+							<div style="clear: both;"></div>
+							<div class="gridCellCandidate" id="C33_7" data-content="7" tabindex="-1">7</div>
+							<div class="gridCellCandidate" id="C33_8" data-content="8" tabindex="-1">8</div>
+							<div class="gridCellCandidate" id="C33_9" data-content="9" tabindex="-1"></div>
+							<div style="clear: both;"></div>
+						</div>
+					</div>
+					<div class="gridCell border bl bt cell" id="C34" tabindex="34" data-row="4" data-column="7" data-box="6" data-neighbour-above-id="25" data-neighbour-below-id="43" data-neighbour-left-id="33" data-neighbour-right-id="35" data-posted="N">
+						<div id="C34_INPUT_CONTAINER" class="gridCellInputContainer" style="display: none;">
+							<div class="gridCellValue"></div>
+						</div>
+
+						<div id="C34_CANDIDATE_CONTAINER" class="gridCellCandidateContainer" style="display: block;">
+							<div class="gridCellCandidate" id="C34_1" data-content="1" tabindex="-1"></div>
+							<div class="gridCellCandidate" id="C34_2" data-content="2" tabindex="-1">2</div>
+							<div class="gridCellCandidate" id="C34_3" data-content="3" tabindex="-1"></div>
+							<div style="clear: both;"></div>
+							<div class="gridCellCandidate" id="C34_4" data-content="4" tabindex="-1"></div>
+							<div class="gridCellCandidate" id="C34_5" data-content="5" tabindex="-1">5</div>
+							<div class="gridCellCandidate" id="C34_6" data-content="6" tabindex="-1">6</div>
+							<div style="clear: both;"></div>
+							<div class="gridCellCandidate" id="C34_7" data-content="7" tabindex="-1"></div>
+							<div class="gridCellCandidate" id="C34_8" data-content="8" tabindex="-1"></div>
+							<div class="gridCellCandidate" id="C34_9" data-content="9" tabindex="-1"></div>
+							<div style="clear: both;"></div>
+						</div>
+					</div>
+					<div class="gridCell border cl bt cell" id="C35" tabindex="35" data-row="4" data-column="8" data-box="6" data-neighbour-above-id="26" data-neighbour-below-id="44" data-neighbour-left-id="34" data-neighbour-right-id="36" data-posted="N">
+						<div id="C35_INPUT_CONTAINER" class="gridCellInputContainer" style="display: none;">
+							<div class="gridCellValue"></div>
+						</div>
+
+						<div id="C35_CANDIDATE_CONTAINER" class="gridCellCandidateContainer" style="display: block;">
+							<div class="gridCellCandidate" id="C35_1" data-content="1" tabindex="-1">1</div>
+							<div class="gridCellCandidate" id="C35_2" data-content="2" tabindex="-1"></div>
+							<div class="gridCellCandidate" id="C35_3" data-content="3" tabindex="-1">3</div>
+							<div style="clear: both;"></div>
+							<div class="gridCellCandidate" id="C35_4" data-content="4" tabindex="-1"></div>
+							<div class="gridCellCandidate" id="C35_5" data-content="5" tabindex="-1"></div>
+							<div class="gridCellCandidate" id="C35_6" data-content="6" tabindex="-1">6</div>
+							<div style="clear: both;"></div>
+							<div class="gridCellCandidate" id="C35_7" data-content="7" tabindex="-1"></div>
+							<div class="gridCellCandidate" id="C35_8" data-content="8" tabindex="-1">8</div>
+							<div class="gridCellCandidate" id="C35_9" data-content="9" tabindex="-1"></div>
+							<div style="clear: both;"></div>
+						</div>
+					</div>
+					<div class="gridCell border cl gr bt cell" id="C36" tabindex="36" data-row="4" data-column="9" data-box="6" data-neighbour-above-id="27" data-neighbour-below-id="45" data-neighbour-left-id="35" data-neighbour-right-id="37" data-posted="N">
+						<div id="C36_INPUT_CONTAINER" class="gridCellInputContainer" style="display: none;">
+							<div class="gridCellValue"></div>
+						</div>
+
+						<div id="C36_CANDIDATE_CONTAINER" class="gridCellCandidateContainer" style="display: block;">
+							<div class="gridCellCandidate" id="C36_1" data-content="1" tabindex="-1">1</div>
+							<div class="gridCellCandidate" id="C36_2" data-content="2" tabindex="-1">2</div>
+							<div class="gridCellCandidate" id="C36_3" data-content="3" tabindex="-1"></div>
+							<div style="clear: both;"></div>
+							<div class="gridCellCandidate" id="C36_4" data-content="4" tabindex="-1"></div>
+							<div class="gridCellCandidate" id="C36_5" data-content="5" tabindex="-1">5</div>
+							<div class="gridCellCandidate" id="C36_6" data-content="6" tabindex="-1"></div>
+							<div style="clear: both;"></div>
+							<div class="gridCellCandidate" id="C36_7" data-content="7" tabindex="-1"></div>
+							<div class="gridCellCandidate" id="C36_8" data-content="8" tabindex="-1">8</div>
+							<div class="gridCellCandidate" id="C36_9" data-content="9" tabindex="-1"></div>
+							<div style="clear: both;"></div>
+						</div>
+					</div>
+				</div>
+				<div style="clear: both;"></div>
+				<div class="gridRow" align="center">
+					<div class="gridCell border gl ct cell" id="C37" tabindex="37" data-row="5" data-column="1" data-box="4" data-neighbour-above-id="28" data-neighbour-below-id="46" data-neighbour-left-id="36" data-neighbour-right-id="38" data-posted="N">
+						<div id="C37_INPUT_CONTAINER" class="gridCellInputContainer" style="display: none;">
+							<div class="gridCellValue"></div>
+						</div>
+
+						<div id="C37_CANDIDATE_CONTAINER" class="gridCellCandidateContainer" style="display: block;">
+							<div class="gridCellCandidate" id="C37_1" data-content="1" tabindex="-1"></div>
+							<div class="gridCellCandidate" id="C37_2" data-content="2" tabindex="-1">2</div>
+							<div class="gridCellCandidate" id="C37_3" data-content="3" tabindex="-1"></div>
+							<div style="clear: both;"></div>
+							<div class="gridCellCandidate" id="C37_4" data-content="4" tabindex="-1">4</div>
+							<div class="gridCellCandidate" id="C37_5" data-content="5" tabindex="-1"></div>
+							<div class="gridCellCandidate" id="C37_6" data-content="6" tabindex="-1"></div>
+							<div style="clear: both;"></div>
+							<div class="gridCellCandidate" id="C37_7" data-content="7" tabindex="-1"></div>
+							<div class="gridCellCandidate" id="C37_8" data-content="8" tabindex="-1">8</div>
+							<div class="gridCellCandidate" id="C37_9" data-content="9" tabindex="-1"></div>
+							<div style="clear: both;"></div>
+						</div>
+					</div>
+					<div class="gridCell border cl ct cell" id="C38" tabindex="38" data-row="5" data-column="2" data-box="4" data-neighbour-above-id="29" data-neighbour-below-id="47" data-neighbour-left-id="37" data-neighbour-right-id="39" data-posted="N">
+						<div id="C38_INPUT_CONTAINER" class="gridCellInputContainer" style="display: none;">
+							<div class="gridCellValue"></div>
+						</div>
+
+						<div id="C38_CANDIDATE_CONTAINER" class="gridCellCandidateContainer" style="display: block;">
+							<div class="gridCellCandidate" id="C38_1" data-content="1" tabindex="-1"></div>
+							<div class="gridCellCandidate" id="C38_2" data-content="2" tabindex="-1"></div>
+							<div class="gridCellCandidate" id="C38_3" data-content="3" tabindex="-1"></div>
+							<div style="clear: both;"></div>
+							<div class="gridCellCandidate" id="C38_4" data-content="4" tabindex="-1">4</div>
+							<div class="gridCellCandidate" id="C38_5" data-content="5" tabindex="-1"></div>
+							<div class="gridCellCandidate" id="C38_6" data-content="6" tabindex="-1"></div>
+							<div style="clear: both;"></div>
+							<div class="gridCellCandidate" id="C38_7" data-content="7" tabindex="-1"></div>
+							<div class="gridCellCandidate" id="C38_8" data-content="8" tabindex="-1"></div>
+							<div class="gridCellCandidate" id="C38_9" data-content="9" tabindex="-1"></div>
+							<div style="clear: both;"></div>
+						</div>
+					</div>
+					<div class="gridCell border cl ct inputcell" id="C39" tabindex="39" data-row="5" data-column="3" data-box="4" data-neighbour-above-id="30" data-neighbour-below-id="48" data-neighbour-left-id="38" data-neighbour-right-id="40" data-posted="Y">
+						<div id="C39_INPUT_CONTAINER" class="gridCellInputContainer" style="display: block;">
+							<div class="gridCellValue">5</div>
+						</div>
+
+						<div id="C39_CANDIDATE_CONTAINER" class="gridCellCandidateContainer" style="display: none;">
+							<div class="gridCellCandidate" id="C39_1" data-content="1" tabindex="-1"></div>
+							<div class="gridCellCandidate" id="C39_2" data-content="2" tabindex="-1"></div>
+							<div class="gridCellCandidate" id="C39_3" data-content="3" tabindex="-1"></div>
+							<div style="clear: both;"></div>
+							<div class="gridCellCandidate" id="C39_4" data-content="4" tabindex="-1"></div>
+							<div class="gridCellCandidate" id="C39_5" data-content="5" tabindex="-1"></div>
+							<div class="gridCellCandidate" id="C39_6" data-content="6" tabindex="-1"></div>
+							<div style="clear: both;"></div>
+							<div class="gridCellCandidate" id="C39_7" data-content="7" tabindex="-1"></div>
+							<div class="gridCellCandidate" id="C39_8" data-content="8" tabindex="-1"></div>
+							<div class="gridCellCandidate" id="C39_9" data-content="9" tabindex="-1"></div>
+							<div style="clear: both;"></div>
+						</div>
+					</div>
+					<div class="gridCell border bl ct inputcell" id="C40" tabindex="40" data-row="5" data-column="4" data-box="5" data-neighbour-above-id="31" data-neighbour-below-id="49" data-neighbour-left-id="39" data-neighbour-right-id="41" data-posted="Y">
+						<div id="C40_INPUT_CONTAINER" class="gridCellInputContainer" style="display: block;">
+							<div class="gridCellValue">3</div>
+						</div>
+
+						<div id="C40_CANDIDATE_CONTAINER" class="gridCellCandidateContainer" style="display: none;">
+							<div class="gridCellCandidate" id="C40_1" data-content="1" tabindex="-1"></div>
+							<div class="gridCellCandidate" id="C40_2" data-content="2" tabindex="-1"></div>
+							<div class="gridCellCandidate" id="C40_3" data-content="3" tabindex="-1"></div>
+							<div style="clear: both;"></div>
+							<div class="gridCellCandidate" id="C40_4" data-content="4" tabindex="-1"></div>
+							<div class="gridCellCandidate" id="C40_5" data-content="5" tabindex="-1"></div>
+							<div class="gridCellCandidate" id="C40_6" data-content="6" tabindex="-1"></div>
+							<div style="clear: both;"></div>
+							<div class="gridCellCandidate" id="C40_7" data-content="7" tabindex="-1"></div>
+							<div class="gridCellCandidate" id="C40_8" data-content="8" tabindex="-1"></div>
+							<div class="gridCellCandidate" id="C40_9" data-content="9" tabindex="-1"></div>
+							<div style="clear: both;"></div>
+						</div>
+					</div>
+					<div class="gridCell border cl ct inputcell" id="C41" tabindex="41" data-row="5" data-column="5" data-box="5" data-neighbour-above-id="32" data-neighbour-below-id="50" data-neighbour-left-id="40" data-neighbour-right-id="42" data-posted="Y">
+						<div id="C41_INPUT_CONTAINER" class="gridCellInputContainer" style="display: block;">
+							<div class="gridCellValue">6</div>
+						</div>
+
+						<div id="C41_CANDIDATE_CONTAINER" class="gridCellCandidateContainer" style="display: none;">
+							<div class="gridCellCandidate" id="C41_1" data-content="1" tabindex="-1"></div>
+							<div class="gridCellCandidate" id="C41_2" data-content="2" tabindex="-1"></div>
+							<div class="gridCellCandidate" id="C41_3" data-content="3" tabindex="-1"></div>
+							<div style="clear: both;"></div>
+							<div class="gridCellCandidate" id="C41_4" data-content="4" tabindex="-1"></div>
+							<div class="gridCellCandidate" id="C41_5" data-content="5" tabindex="-1"></div>
+							<div class="gridCellCandidate" id="C41_6" data-content="6" tabindex="-1"></div>
+							<div style="clear: both;"></div>
+							<div class="gridCellCandidate" id="C41_7" data-content="7" tabindex="-1"></div>
+							<div class="gridCellCandidate" id="C41_8" data-content="8" tabindex="-1"></div>
+							<div class="gridCellCandidate" id="C41_9" data-content="9" tabindex="-1"></div>
+							<div style="clear: both;"></div>
+						</div>
+					</div>
+					<div class="gridCell border cl ct inputcell" id="C42" tabindex="42" data-row="5" data-column="6" data-box="5" data-neighbour-above-id="33" data-neighbour-below-id="51" data-neighbour-left-id="41" data-neighbour-right-id="43" data-posted="Y">
+						<div id="C42_INPUT_CONTAINER" class="gridCellInputContainer" style="display: block;">
+							<div class="gridCellValue">1</div>
+						</div>
+
+						<div id="C42_CANDIDATE_CONTAINER" class="gridCellCandidateContainer" style="display: none;">
+							<div class="gridCellCandidate" id="C42_1" data-content="1" tabindex="-1"></div>
+							<div class="gridCellCandidate" id="C42_2" data-content="2" tabindex="-1"></div>
+							<div class="gridCellCandidate" id="C42_3" data-content="3" tabindex="-1"></div>
+							<div style="clear: both;"></div>
+							<div class="gridCellCandidate" id="C42_4" data-content="4" tabindex="-1"></div>
+							<div class="gridCellCandidate" id="C42_5" data-content="5" tabindex="-1"></div>
+							<div class="gridCellCandidate" id="C42_6" data-content="6" tabindex="-1"></div>
+							<div style="clear: both;"></div>
+							<div class="gridCellCandidate" id="C42_7" data-content="7" tabindex="-1"></div>
+							<div class="gridCellCandidate" id="C42_8" data-content="8" tabindex="-1"></div>
+							<div class="gridCellCandidate" id="C42_9" data-content="9" tabindex="-1"></div>
+							<div style="clear: both;"></div>
+						</div>
+					</div>
+					<div class="gridCell border bl ct inputcell" id="C43" tabindex="43" data-row="5" data-column="7" data-box="6" data-neighbour-above-id="34" data-neighbour-below-id="52" data-neighbour-left-id="42" data-neighbour-right-id="44" data-posted="Y">
+						<div id="C43_INPUT_CONTAINER" class="gridCellInputContainer" style="display: block;">
+							<div class="gridCellValue">7</div>
+						</div>
+
+						<div id="C43_CANDIDATE_CONTAINER" class="gridCellCandidateContainer" style="display: none;">
+							<div class="gridCellCandidate" id="C43_1" data-content="1" tabindex="-1"></div>
+							<div class="gridCellCandidate" id="C43_2" data-content="2" tabindex="-1"></div>
+							<div class="gridCellCandidate" id="C43_3" data-content="3" tabindex="-1"></div>
+							<div style="clear: both;"></div>
+							<div class="gridCellCandidate" id="C43_4" data-content="4" tabindex="-1"></div>
+							<div class="gridCellCandidate" id="C43_5" data-content="5" tabindex="-1"></div>
+							<div class="gridCellCandidate" id="C43_6" data-content="6" tabindex="-1"></div>
+							<div style="clear: both;"></div>
+							<div class="gridCellCandidate" id="C43_7" data-content="7" tabindex="-1"></div>
+							<div class="gridCellCandidate" id="C43_8" data-content="8" tabindex="-1"></div>
+							<div class="gridCellCandidate" id="C43_9" data-content="9" tabindex="-1"></div>
+							<div style="clear: both;"></div>
+						</div>
+					</div>
+					<div class="gridCell border cl ct cell" id="C44" tabindex="44" data-row="5" data-column="8" data-box="6" data-neighbour-above-id="35" data-neighbour-below-id="53" data-neighbour-left-id="43" data-neighbour-right-id="45" data-posted="N">
+						<div id="C44_INPUT_CONTAINER" class="gridCellInputContainer" style="display: none;">
+							<div class="gridCellValue"></div>
+						</div>
+
+						<div id="C44_CANDIDATE_CONTAINER" class="gridCellCandidateContainer" style="display: block;">
+							<div class="gridCellCandidate" id="C44_1" data-content="1" tabindex="-1"></div>
+							<div class="gridCellCandidate" id="C44_2" data-content="2" tabindex="-1"></div>
+							<div class="gridCellCandidate" id="C44_3" data-content="3" tabindex="-1"></div>
+							<div style="clear: both;"></div>
+							<div class="gridCellCandidate" id="C44_4" data-content="4" tabindex="-1"></div>
+							<div class="gridCellCandidate" id="C44_5" data-content="5" tabindex="-1"></div>
+							<div class="gridCellCandidate" id="C44_6" data-content="6" tabindex="-1"></div>
+							<div style="clear: both;"></div>
+							<div class="gridCellCandidate" id="C44_7" data-content="7" tabindex="-1"></div>
+							<div class="gridCellCandidate" id="C44_8" data-content="8" tabindex="-1">8</div>
+							<div class="gridCellCandidate" id="C44_9" data-content="9" tabindex="-1">9</div>
+							<div style="clear: both;"></div>
+						</div>
+					</div>
+					<div class="gridCell border cl gr ct cell" id="C45" tabindex="45" data-row="5" data-column="9" data-box="6" data-neighbour-above-id="36" data-neighbour-below-id="54" data-neighbour-left-id="44" data-neighbour-right-id="46" data-posted="N">
+						<div id="C45_INPUT_CONTAINER" class="gridCellInputContainer" style="display: none;">
+							<div class="gridCellValue"></div>
+						</div>
+
+						<div id="C45_CANDIDATE_CONTAINER" class="gridCellCandidateContainer" style="display: block;">
+							<div class="gridCellCandidate" id="C45_1" data-content="1" tabindex="-1"></div>
+							<div class="gridCellCandidate" id="C45_2" data-content="2" tabindex="-1">2</div>
+							<div class="gridCellCandidate" id="C45_3" data-content="3" tabindex="-1"></div>
+							<div style="clear: both;"></div>
+							<div class="gridCellCandidate" id="C45_4" data-content="4" tabindex="-1"></div>
+							<div class="gridCellCandidate" id="C45_5" data-content="5" tabindex="-1"></div>
+							<div class="gridCellCandidate" id="C45_6" data-content="6" tabindex="-1"></div>
+							<div style="clear: both;"></div>
+							<div class="gridCellCandidate" id="C45_7" data-content="7" tabindex="-1"></div>
+							<div class="gridCellCandidate" id="C45_8" data-content="8" tabindex="-1">8</div>
+							<div class="gridCellCandidate" id="C45_9" data-content="9" tabindex="-1">9</div>
+							<div style="clear: both;"></div>
+						</div>
+					</div>
+				</div>
+				<div style="clear: both;"></div>
+				<div class="gridRow" align="center">
+					<div class="gridCell border gl ct cell" id="C46" tabindex="46" data-row="6" data-column="1" data-box="4" data-neighbour-above-id="37" data-neighbour-below-id="55" data-neighbour-left-id="45" data-neighbour-right-id="47" data-posted="N">
+						<div id="C46_INPUT_CONTAINER" class="gridCellInputContainer" style="display: none;">
+							<div class="gridCellValue"></div>
+						</div>
+
+						<div id="C46_CANDIDATE_CONTAINER" class="gridCellCandidateContainer" style="display: block;">
+							<div class="gridCellCandidate" id="C46_1" data-content="1" tabindex="-1"></div>
+							<div class="gridCellCandidate" id="C46_2" data-content="2" tabindex="-1">2</div>
+							<div class="gridCellCandidate" id="C46_3" data-content="3" tabindex="-1">3</div>
+							<div style="clear: both;"></div>
+							<div class="gridCellCandidate" id="C46_4" data-content="4" tabindex="-1"></div>
+							<div class="gridCellCandidate" id="C46_5" data-content="5" tabindex="-1"></div>
+							<div class="gridCellCandidate" id="C46_6" data-content="6" tabindex="-1">6</div>
+							<div style="clear: both;"></div>
+							<div class="gridCellCandidate" id="C46_7" data-content="7" tabindex="-1">7</div>
+							<div class="gridCellCandidate" id="C46_8" data-content="8" tabindex="-1">8</div>
+							<div class="gridCellCandidate" id="C46_9" data-content="9" tabindex="-1"></div>
+							<div style="clear: both;"></div>
+						</div>
+					</div>
+					<div class="gridCell border cl ct cell" id="C47" tabindex="47" data-row="6" data-column="2" data-box="4" data-neighbour-above-id="38" data-neighbour-below-id="56" data-neighbour-left-id="46" data-neighbour-right-id="48" data-posted="N">
+						<div id="C47_INPUT_CONTAINER" class="gridCellInputContainer" style="display: none;">
+							<div class="gridCellValue"></div>
+						</div>
+
+						<div id="C47_CANDIDATE_CONTAINER" class="gridCellCandidateContainer" style="display: block;">
+							<div class="gridCellCandidate" id="C47_1" data-content="1" tabindex="-1">1</div>
+							<div class="gridCellCandidate" id="C47_2" data-content="2" tabindex="-1"></div>
+							<div class="gridCellCandidate" id="C47_3" data-content="3" tabindex="-1">3</div>
+							<div style="clear: both;"></div>
+							<div class="gridCellCandidate" id="C47_4" data-content="4" tabindex="-1"></div>
+							<div class="gridCellCandidate" id="C47_5" data-content="5" tabindex="-1"></div>
+							<div class="gridCellCandidate" id="C47_6" data-content="6" tabindex="-1">6</div>
+							<div style="clear: both;"></div>
+							<div class="gridCellCandidate" id="C47_7" data-content="7" tabindex="-1">7</div>
+							<div class="gridCellCandidate" id="C47_8" data-content="8" tabindex="-1"></div>
+							<div class="gridCellCandidate" id="C47_9" data-content="9" tabindex="-1"></div>
+							<div style="clear: both;"></div>
+						</div>
+					</div>
+					<div class="gridCell border cl ct cell" id="C48" tabindex="48" data-row="6" data-column="3" data-box="4" data-neighbour-above-id="39" data-neighbour-below-id="57" data-neighbour-left-id="47" data-neighbour-right-id="49" data-posted="N">
+						<div id="C48_INPUT_CONTAINER" class="gridCellInputContainer" style="display: none;">
+							<div class="gridCellValue"></div>
+						</div>
+
+						<div id="C48_CANDIDATE_CONTAINER" class="gridCellCandidateContainer" style="display: block;">
+							<div class="gridCellCandidate" id="C48_1" data-content="1" tabindex="-1"></div>
+							<div class="gridCellCandidate" id="C48_2" data-content="2" tabindex="-1">2</div>
+							<div class="gridCellCandidate" id="C48_3" data-content="3" tabindex="-1"></div>
+							<div style="clear: both;"></div>
+							<div class="gridCellCandidate" id="C48_4" data-content="4" tabindex="-1"></div>
+							<div class="gridCellCandidate" id="C48_5" data-content="5" tabindex="-1"></div>
+							<div class="gridCellCandidate" id="C48_6" data-content="6" tabindex="-1">6</div>
+							<div style="clear: both;"></div>
+							<div class="gridCellCandidate" id="C48_7" data-content="7" tabindex="-1">7</div>
+							<div class="gridCellCandidate" id="C48_8" data-content="8" tabindex="-1">8</div>
+							<div class="gridCellCandidate" id="C48_9" data-content="9" tabindex="-1"></div>
+							<div style="clear: both;"></div>
+						</div>
+					</div>
+					<div class="gridCell border bl ct cell" id="C49" tabindex="49" data-row="6" data-column="4" data-box="5" data-neighbour-above-id="40" data-neighbour-below-id="58" data-neighbour-left-id="48" data-neighbour-right-id="50" data-posted="N">
+						<div id="C49_INPUT_CONTAINER" class="gridCellInputContainer" style="display: none;">
+							<div class="gridCellValue"></div>
+						</div>
+
+						<div id="C49_CANDIDATE_CONTAINER" class="gridCellCandidateContainer" style="display: block;">
+							<div class="gridCellCandidate" id="C49_1" data-content="1" tabindex="-1"></div>
+							<div class="gridCellCandidate" id="C49_2" data-content="2" tabindex="-1"></div>
+							<div class="gridCellCandidate" id="C49_3" data-content="3" tabindex="-1"></div>
+							<div style="clear: both;"></div>
+							<div class="gridCellCandidate" id="C49_4" data-content="4" tabindex="-1"></div>
+							<div class="gridCellCandidate" id="C49_5" data-content="5" tabindex="-1">5</div>
+							<div class="gridCellCandidate" id="C49_6" data-content="6" tabindex="-1"></div>
+							<div style="clear: both;"></div>
+							<div class="gridCellCandidate" id="C49_7" data-content="7" tabindex="-1">7</div>
+							<div class="gridCellCandidate" id="C49_8" data-content="8" tabindex="-1">8</div>
+							<div class="gridCellCandidate" id="C49_9" data-content="9" tabindex="-1">9</div>
+							<div style="clear: both;"></div>
+						</div>
+					</div>
+					<div class="gridCell border cl ct cell" id="C50" tabindex="50" data-row="6" data-column="5" data-box="5" data-neighbour-above-id="41" data-neighbour-below-id="59" data-neighbour-left-id="49" data-neighbour-right-id="51" data-posted="N">
+						<div id="C50_INPUT_CONTAINER" class="gridCellInputContainer" style="display: none;">
+							<div class="gridCellValue"></div>
+						</div>
+
+						<div id="C50_CANDIDATE_CONTAINER" class="gridCellCandidateContainer" style="display: block;">
+							<div class="gridCellCandidate" id="C50_1" data-content="1" tabindex="-1"></div>
+							<div class="gridCellCandidate" id="C50_2" data-content="2" tabindex="-1">2</div>
+							<div class="gridCellCandidate" id="C50_3" data-content="3" tabindex="-1"></div>
+							<div style="clear: both;"></div>
+							<div class="gridCellCandidate" id="C50_4" data-content="4" tabindex="-1"></div>
+							<div class="gridCellCandidate" id="C50_5" data-content="5" tabindex="-1"></div>
+							<div class="gridCellCandidate" id="C50_6" data-content="6" tabindex="-1"></div>
+							<div style="clear: both;"></div>
+							<div class="gridCellCandidate" id="C50_7" data-content="7" tabindex="-1">7</div>
+							<div class="gridCellCandidate" id="C50_8" data-content="8" tabindex="-1"></div>
+							<div class="gridCellCandidate" id="C50_9" data-content="9" tabindex="-1"></div>
+							<div style="clear: both;"></div>
+						</div>
+					</div>
+					<div class="gridCell border cl ct cell" id="C51" tabindex="51" data-row="6" data-column="6" data-box="5" data-neighbour-above-id="42" data-neighbour-below-id="60" data-neighbour-left-id="50" data-neighbour-right-id="52" data-posted="N">
+						<div id="C51_INPUT_CONTAINER" class="gridCellInputContainer" style="display: none;">
+							<div class="gridCellValue"></div>
+						</div>
+
+						<div id="C51_CANDIDATE_CONTAINER" class="gridCellCandidateContainer" style="display: block;">
+							<div class="gridCellCandidate" id="C51_1" data-content="1" tabindex="-1"></div>
+							<div class="gridCellCandidate" id="C51_2" data-content="2" tabindex="-1">2</div>
+							<div class="gridCellCandidate" id="C51_3" data-content="3" tabindex="-1"></div>
+							<div style="clear: both;"></div>
+							<div class="gridCellCandidate" id="C51_4" data-content="4" tabindex="-1"></div>
+							<div class="gridCellCandidate" id="C51_5" data-content="5" tabindex="-1">5</div>
+							<div class="gridCellCandidate" id="C51_6" data-content="6" tabindex="-1"></div>
+							<div style="clear: both;"></div>
+							<div class="gridCellCandidate" id="C51_7" data-content="7" tabindex="-1">7</div>
+							<div class="gridCellCandidate" id="C51_8" data-content="8" tabindex="-1">8</div>
+							<div class="gridCellCandidate" id="C51_9" data-content="9" tabindex="-1">9</div>
+							<div style="clear: both;"></div>
+						</div>
+					</div>
+					<div class="gridCell border bl ct cell" id="C52" tabindex="52" data-row="6" data-column="7" data-box="6" data-neighbour-above-id="43" data-neighbour-below-id="61" data-neighbour-left-id="51" data-neighbour-right-id="53" data-posted="N">
+						<div id="C52_INPUT_CONTAINER" class="gridCellInputContainer" style="display: none;">
+							<div class="gridCellValue"></div>
+						</div>
+
+						<div id="C52_CANDIDATE_CONTAINER" class="gridCellCandidateContainer" style="display: block;">
+							<div class="gridCellCandidate" id="C52_1" data-content="1" tabindex="-1"></div>
+							<div class="gridCellCandidate" id="C52_2" data-content="2" tabindex="-1">2</div>
+							<div class="gridCellCandidate" id="C52_3" data-content="3" tabindex="-1"></div>
+							<div style="clear: both;"></div>
+							<div class="gridCellCandidate" id="C52_4" data-content="4" tabindex="-1"></div>
+							<div class="gridCellCandidate" id="C52_5" data-content="5" tabindex="-1">5</div>
+							<div class="gridCellCandidate" id="C52_6" data-content="6" tabindex="-1">6</div>
+							<div style="clear: both;"></div>
+							<div class="gridCellCandidate" id="C52_7" data-content="7" tabindex="-1"></div>
+							<div class="gridCellCandidate" id="C52_8" data-content="8" tabindex="-1"></div>
+							<div class="gridCellCandidate" id="C52_9" data-content="9" tabindex="-1">9</div>
+							<div style="clear: both;"></div>
+						</div>
+					</div>
+					<div class="gridCell border cl ct cell" id="C53" tabindex="53" data-row="6" data-column="8" data-box="6" data-neighbour-above-id="44" data-neighbour-below-id="62" data-neighbour-left-id="52" data-neighbour-right-id="54" data-posted="N">
+						<div id="C53_INPUT_CONTAINER" class="gridCellInputContainer" style="display: none;">
+							<div class="gridCellValue"></div>
+						</div>
+
+						<div id="C53_CANDIDATE_CONTAINER" class="gridCellCandidateContainer" style="display: block;">
+							<div class="gridCellCandidate" id="C53_1" data-content="1" tabindex="-1">1</div>
+							<div class="gridCellCandidate" id="C53_2" data-content="2" tabindex="-1"></div>
+							<div class="gridCellCandidate" id="C53_3" data-content="3" tabindex="-1">3</div>
+							<div style="clear: both;"></div>
+							<div class="gridCellCandidate" id="C53_4" data-content="4" tabindex="-1"></div>
+							<div class="gridCellCandidate" id="C53_5" data-content="5" tabindex="-1"></div>
+							<div class="gridCellCandidate" id="C53_6" data-content="6" tabindex="-1">6</div>
+							<div style="clear: both;"></div>
+							<div class="gridCellCandidate" id="C53_7" data-content="7" tabindex="-1"></div>
+							<div class="gridCellCandidate" id="C53_8" data-content="8" tabindex="-1">8</div>
+							<div class="gridCellCandidate" id="C53_9" data-content="9" tabindex="-1">9</div>
+							<div style="clear: both;"></div>
+						</div>
+					</div>
+					<div class="gridCell border cl gr ct inputcell" id="C54" tabindex="54" data-row="6" data-column="9" data-box="6" data-neighbour-above-id="45" data-neighbour-below-id="63" data-neighbour-left-id="53" data-neighbour-right-id="55" data-posted="Y">
+						<div id="C54_INPUT_CONTAINER" class="gridCellInputContainer" style="display: block;">
+							<div class="gridCellValue">4</div>
+						</div>
+
+						<div id="C54_CANDIDATE_CONTAINER" class="gridCellCandidateContainer" style="display: none;">
+							<div class="gridCellCandidate" id="C54_1" data-content="1" tabindex="-1"></div>
+							<div class="gridCellCandidate" id="C54_2" data-content="2" tabindex="-1"></div>
+							<div class="gridCellCandidate" id="C54_3" data-content="3" tabindex="-1"></div>
+							<div style="clear: both;"></div>
+							<div class="gridCellCandidate" id="C54_4" data-content="4" tabindex="-1"></div>
+							<div class="gridCellCandidate" id="C54_5" data-content="5" tabindex="-1"></div>
+							<div class="gridCellCandidate" id="C54_6" data-content="6" tabindex="-1"></div>
+							<div style="clear: both;"></div>
+							<div class="gridCellCandidate" id="C54_7" data-content="7" tabindex="-1"></div>
+							<div class="gridCellCandidate" id="C54_8" data-content="8" tabindex="-1"></div>
+							<div class="gridCellCandidate" id="C54_9" data-content="9" tabindex="-1"></div>
+							<div style="clear: both;"></div>
+						</div>
+					</div>
+				</div>
+				<div style="clear: both;"></div>
+				<div class="gridRow" align="center">
+					<div class="gridCell border gl bt cell" id="C55" tabindex="55" data-row="7" data-column="1" data-box="7" data-neighbour-above-id="46" data-neighbour-below-id="64" data-neighbour-left-id="54" data-neighbour-right-id="56" data-posted="N">
+						<div id="C55_INPUT_CONTAINER" class="gridCellInputContainer" style="display: none;">
+							<div class="gridCellValue"></div>
+						</div>
+
+						<div id="C55_CANDIDATE_CONTAINER" class="gridCellCandidateContainer" style="display: block;">
+							<div class="gridCellCandidate" id="C55_1" data-content="1" tabindex="-1"></div>
+							<div class="gridCellCandidate" id="C55_2" data-content="2" tabindex="-1">2</div>
+							<div class="gridCellCandidate" id="C55_3" data-content="3" tabindex="-1">3</div>
+							<div style="clear: both;"></div>
+							<div class="gridCellCandidate" id="C55_4" data-content="4" tabindex="-1">4</div>
+							<div class="gridCellCandidate" id="C55_5" data-content="5" tabindex="-1">5</div>
+							<div class="gridCellCandidate" id="C55_6" data-content="6" tabindex="-1">6</div>
+							<div style="clear: both;"></div>
+							<div class="gridCellCandidate" id="C55_7" data-content="7" tabindex="-1">7</div>
+							<div class="gridCellCandidate" id="C55_8" data-content="8" tabindex="-1"></div>
+							<div class="gridCellCandidate" id="C55_9" data-content="9" tabindex="-1"></div>
+							<div style="clear: both;"></div>
+						</div>
+					</div>
+					<div class="gridCell border cl bt inputcell" id="C56" tabindex="56" data-row="7" data-column="2" data-box="7" data-neighbour-above-id="47" data-neighbour-below-id="65" data-neighbour-left-id="55" data-neighbour-right-id="57" data-posted="Y">
+						<div id="C56_INPUT_CONTAINER" class="gridCellInputContainer" style="display: block;">
+							<div class="gridCellValue">8</div>
+						</div>
+
+						<div id="C56_CANDIDATE_CONTAINER" class="gridCellCandidateContainer" style="display: none;">
+							<div class="gridCellCandidate" id="C56_1" data-content="1" tabindex="-1"></div>
+							<div class="gridCellCandidate" id="C56_2" data-content="2" tabindex="-1"></div>
+							<div class="gridCellCandidate" id="C56_3" data-content="3" tabindex="-1"></div>
+							<div style="clear: both;"></div>
+							<div class="gridCellCandidate" id="C56_4" data-content="4" tabindex="-1"></div>
+							<div class="gridCellCandidate" id="C56_5" data-content="5" tabindex="-1"></div>
+							<div class="gridCellCandidate" id="C56_6" data-content="6" tabindex="-1"></div>
+							<div style="clear: both;"></div>
+							<div class="gridCellCandidate" id="C56_7" data-content="7" tabindex="-1"></div>
+							<div class="gridCellCandidate" id="C56_8" data-content="8" tabindex="-1"></div>
+							<div class="gridCellCandidate" id="C56_9" data-content="9" tabindex="-1"></div>
+							<div style="clear: both;"></div>
+						</div>
+					</div>
+					<div class="gridCell border cl bt cell" id="C57" tabindex="57" data-row="7" data-column="3" data-box="7" data-neighbour-above-id="48" data-neighbour-below-id="66" data-neighbour-left-id="56" data-neighbour-right-id="58" data-posted="N">
+						<div id="C57_INPUT_CONTAINER" class="gridCellInputContainer" style="display: none;">
+							<div class="gridCellValue"></div>
+						</div>
+
+						<div id="C57_CANDIDATE_CONTAINER" class="gridCellCandidateContainer" style="display: block;">
+							<div class="gridCellCandidate" id="C57_1" data-content="1" tabindex="-1"></div>
+							<div class="gridCellCandidate" id="C57_2" data-content="2" tabindex="-1">2</div>
+							<div class="gridCellCandidate" id="C57_3" data-content="3" tabindex="-1"></div>
+							<div style="clear: both;"></div>
+							<div class="gridCellCandidate" id="C57_4" data-content="4" tabindex="-1">4</div>
+							<div class="gridCellCandidate" id="C57_5" data-content="5" tabindex="-1"></div>
+							<div class="gridCellCandidate" id="C57_6" data-content="6" tabindex="-1">6</div>
+							<div style="clear: both;"></div>
+							<div class="gridCellCandidate" id="C57_7" data-content="7" tabindex="-1">7</div>
+							<div class="gridCellCandidate" id="C57_8" data-content="8" tabindex="-1"></div>
+							<div class="gridCellCandidate" id="C57_9" data-content="9" tabindex="-1"></div>
+							<div style="clear: both;"></div>
+						</div>
+					</div>
+					<div class="gridCell border bl bt cell" id="C58" tabindex="58" data-row="7" data-column="4" data-box="8" data-neighbour-above-id="49" data-neighbour-below-id="67" data-neighbour-left-id="57" data-neighbour-right-id="59" data-posted="N">
+						<div id="C58_INPUT_CONTAINER" class="gridCellInputContainer" style="display: none;">
+							<div class="gridCellValue"></div>
+						</div>
+
+						<div id="C58_CANDIDATE_CONTAINER" class="gridCellCandidateContainer" style="display: block;">
+							<div class="gridCellCandidate" id="C58_1" data-content="1" tabindex="-1">1</div>
+							<div class="gridCellCandidate" id="C58_2" data-content="2" tabindex="-1"></div>
+							<div class="gridCellCandidate" id="C58_3" data-content="3" tabindex="-1"></div>
+							<div style="clear: both;"></div>
+							<div class="gridCellCandidate" id="C58_4" data-content="4" tabindex="-1"></div>
+							<div class="gridCellCandidate" id="C58_5" data-content="5" tabindex="-1"></div>
+							<div class="gridCellCandidate" id="C58_6" data-content="6" tabindex="-1"></div>
+							<div style="clear: both;"></div>
+							<div class="gridCellCandidate" id="C58_7" data-content="7" tabindex="-1">7</div>
+							<div class="gridCellCandidate" id="C58_8" data-content="8" tabindex="-1"></div>
+							<div class="gridCellCandidate" id="C58_9" data-content="9" tabindex="-1">9</div>
+							<div style="clear: both;"></div>
+						</div>
+					</div>
+					<div class="gridCell border cl bt cell" id="C59" tabindex="59" data-row="7" data-column="5" data-box="8" data-neighbour-above-id="50" data-neighbour-below-id="68" data-neighbour-left-id="58" data-neighbour-right-id="60" data-posted="N">
+						<div id="C59_INPUT_CONTAINER" class="gridCellInputContainer" style="display: none;">
+							<div class="gridCellValue"></div>
+						</div>
+
+						<div id="C59_CANDIDATE_CONTAINER" class="gridCellCandidateContainer" style="display: block;">
+							<div class="gridCellCandidate" id="C59_1" data-content="1" tabindex="-1"></div>
+							<div class="gridCellCandidate" id="C59_2" data-content="2" tabindex="-1">2</div>
+							<div class="gridCellCandidate" id="C59_3" data-content="3" tabindex="-1">3</div>
+							<div style="clear: both;"></div>
+							<div class="gridCellCandidate" id="C59_4" data-content="4" tabindex="-1"></div>
+							<div class="gridCellCandidate" id="C59_5" data-content="5" tabindex="-1"></div>
+							<div class="gridCellCandidate" id="C59_6" data-content="6" tabindex="-1"></div>
+							<div style="clear: both;"></div>
+							<div class="gridCellCandidate" id="C59_7" data-content="7" tabindex="-1">7</div>
+							<div class="gridCellCandidate" id="C59_8" data-content="8" tabindex="-1"></div>
+							<div class="gridCellCandidate" id="C59_9" data-content="9" tabindex="-1"></div>
+							<div style="clear: both;"></div>
+						</div>
+					</div>
+					<div class="gridCell border cl bt cell" id="C60" tabindex="60" data-row="7" data-column="6" data-box="8" data-neighbour-above-id="51" data-neighbour-below-id="69" data-neighbour-left-id="59" data-neighbour-right-id="61" data-posted="N">
+						<div id="C60_INPUT_CONTAINER" class="gridCellInputContainer" style="display: none;">
+							<div class="gridCellValue"></div>
+						</div>
+
+						<div id="C60_CANDIDATE_CONTAINER" class="gridCellCandidateContainer" style="display: block;">
+							<div class="gridCellCandidate" id="C60_1" data-content="1" tabindex="-1"></div>
+							<div class="gridCellCandidate" id="C60_2" data-content="2" tabindex="-1">2</div>
+							<div class="gridCellCandidate" id="C60_3" data-content="3" tabindex="-1"></div>
+							<div style="clear: both;"></div>
+							<div class="gridCellCandidate" id="C60_4" data-content="4" tabindex="-1"></div>
+							<div class="gridCellCandidate" id="C60_5" data-content="5" tabindex="-1"></div>
+							<div class="gridCellCandidate" id="C60_6" data-content="6" tabindex="-1"></div>
+							<div style="clear: both;"></div>
+							<div class="gridCellCandidate" id="C60_7" data-content="7" tabindex="-1">7</div>
+							<div class="gridCellCandidate" id="C60_8" data-content="8" tabindex="-1"></div>
+							<div class="gridCellCandidate" id="C60_9" data-content="9" tabindex="-1">9</div>
+							<div style="clear: both;"></div>
+						</div>
+					</div>
+					<div class="gridCell border bl bt cell" id="C61" tabindex="61" data-row="7" data-column="7" data-box="9" data-neighbour-above-id="52" data-neighbour-below-id="70" data-neighbour-left-id="60" data-neighbour-right-id="62" data-posted="N">
+						<div id="C61_INPUT_CONTAINER" class="gridCellInputContainer" style="display: none;">
+							<div class="gridCellValue"></div>
+						</div>
+
+						<div id="C61_CANDIDATE_CONTAINER" class="gridCellCandidateContainer" style="display: block;">
+							<div class="gridCellCandidate" id="C61_1" data-content="1" tabindex="-1"></div>
+							<div class="gridCellCandidate" id="C61_2" data-content="2" tabindex="-1">2</div>
+							<div class="gridCellCandidate" id="C61_3" data-content="3" tabindex="-1"></div>
+							<div style="clear: both;"></div>
+							<div class="gridCellCandidate" id="C61_4" data-content="4" tabindex="-1">4</div>
+							<div class="gridCellCandidate" id="C61_5" data-content="5" tabindex="-1"></div>
+							<div class="gridCellCandidate" id="C61_6" data-content="6" tabindex="-1">6</div>
+							<div style="clear: both;"></div>
+							<div class="gridCellCandidate" id="C61_7" data-content="7" tabindex="-1"></div>
+							<div class="gridCellCandidate" id="C61_8" data-content="8" tabindex="-1"></div>
+							<div class="gridCellCandidate" id="C61_9" data-content="9" tabindex="-1">9</div>
+							<div style="clear: both;"></div>
+						</div>
+					</div>
+					<div class="gridCell border cl bt cell" id="C62" tabindex="62" data-row="7" data-column="8" data-box="9" data-neighbour-above-id="53" data-neighbour-below-id="71" data-neighbour-left-id="61" data-neighbour-right-id="63" data-posted="N">
+						<div id="C62_INPUT_CONTAINER" class="gridCellInputContainer" style="display: none;">
+							<div class="gridCellValue"></div>
+						</div>
+
+						<div id="C62_CANDIDATE_CONTAINER" class="gridCellCandidateContainer" style="display: block;">
+							<div class="gridCellCandidate" id="C62_1" data-content="1" tabindex="-1">1</div>
+							<div class="gridCellCandidate" id="C62_2" data-content="2" tabindex="-1"></div>
+							<div class="gridCellCandidate" id="C62_3" data-content="3" tabindex="-1"></div>
+							<div style="clear: both;"></div>
+							<div class="gridCellCandidate" id="C62_4" data-content="4" tabindex="-1">4</div>
+							<div class="gridCellCandidate" id="C62_5" data-content="5" tabindex="-1"></div>
+							<div class="gridCellCandidate" id="C62_6" data-content="6" tabindex="-1">6</div>
+							<div style="clear: both;"></div>
+							<div class="gridCellCandidate" id="C62_7" data-content="7" tabindex="-1"></div>
+							<div class="gridCellCandidate" id="C62_8" data-content="8" tabindex="-1"></div>
+							<div class="gridCellCandidate" id="C62_9" data-content="9" tabindex="-1">9</div>
+							<div style="clear: both;"></div>
+						</div>
+					</div>
+					<div class="gridCell border cl gr bt cell" id="C63" tabindex="63" data-row="7" data-column="9" data-box="9" data-neighbour-above-id="54" data-neighbour-below-id="72" data-neighbour-left-id="62" data-neighbour-right-id="64" data-posted="N">
+						<div id="C63_INPUT_CONTAINER" class="gridCellInputContainer" style="display: none;">
+							<div class="gridCellValue"></div>
+						</div>
+
+						<div id="C63_CANDIDATE_CONTAINER" class="gridCellCandidateContainer" style="display: block;">
+							<div class="gridCellCandidate" id="C63_1" data-content="1" tabindex="-1">1</div>
+							<div class="gridCellCandidate" id="C63_2" data-content="2" tabindex="-1">2</div>
+							<div class="gridCellCandidate" id="C63_3" data-content="3" tabindex="-1"></div>
+							<div style="clear: both;"></div>
+							<div class="gridCellCandidate" id="C63_4" data-content="4" tabindex="-1"></div>
+							<div class="gridCellCandidate" id="C63_5" data-content="5" tabindex="-1"></div>
+							<div class="gridCellCandidate" id="C63_6" data-content="6" tabindex="-1"></div>
+							<div style="clear: both;"></div>
+							<div class="gridCellCandidate" id="C63_7" data-content="7" tabindex="-1">7</div>
+							<div class="gridCellCandidate" id="C63_8" data-content="8" tabindex="-1"></div>
+							<div class="gridCellCandidate" id="C63_9" data-content="9" tabindex="-1">9</div>
+							<div style="clear: both;"></div>
+						</div>
+					</div>
+				</div>
+				<div style="clear: both;"></div>
+				<div class="gridRow" align="center">
+					<div class="gridCell border gl ct cell" id="C64" tabindex="64" data-row="8" data-column="1" data-box="7" data-neighbour-above-id="55" data-neighbour-below-id="73" data-neighbour-left-id="63" data-neighbour-right-id="65" data-posted="N">
+						<div id="C64_INPUT_CONTAINER" class="gridCellInputContainer" style="display: none;">
+							<div class="gridCellValue"></div>
+						</div>
+
+						<div id="C64_CANDIDATE_CONTAINER" class="gridCellCandidateContainer" style="display: block;">
+							<div class="gridCellCandidate" id="C64_1" data-content="1" tabindex="-1"></div>
+							<div class="gridCellCandidate" id="C64_2" data-content="2" tabindex="-1">2</div>
+							<div class="gridCellCandidate" id="C64_3" data-content="3" tabindex="-1"></div>
+							<div style="clear: both;"></div>
+							<div class="gridCellCandidate" id="C64_4" data-content="4" tabindex="-1">4</div>
+							<div class="gridCellCandidate" id="C64_5" data-content="5" tabindex="-1"></div>
+							<div class="gridCellCandidate" id="C64_6" data-content="6" tabindex="-1"></div>
+							<div style="clear: both;"></div>
+							<div class="gridCellCandidate" id="C64_7" data-content="7" tabindex="-1">7</div>
+							<div class="gridCellCandidate" id="C64_8" data-content="8" tabindex="-1"></div>
+							<div class="gridCellCandidate" id="C64_9" data-content="9" tabindex="-1"></div>
+							<div style="clear: both;"></div>
+						</div>
+					</div>
+					<div class="gridCell border cl ct inputcell" id="C65" tabindex="65" data-row="8" data-column="2" data-box="7" data-neighbour-above-id="56" data-neighbour-below-id="74" data-neighbour-left-id="64" data-neighbour-right-id="66" data-posted="Y">
+						<div id="C65_INPUT_CONTAINER" class="gridCellInputContainer" style="display: block;">
+							<div class="gridCellValue">9</div>
+						</div>
+
+						<div id="C65_CANDIDATE_CONTAINER" class="gridCellCandidateContainer" style="display: none;">
+							<div class="gridCellCandidate" id="C65_1" data-content="1" tabindex="-1"></div>
+							<div class="gridCellCandidate" id="C65_2" data-content="2" tabindex="-1"></div>
+							<div class="gridCellCandidate" id="C65_3" data-content="3" tabindex="-1"></div>
+							<div style="clear: both;"></div>
+							<div class="gridCellCandidate" id="C65_4" data-content="4" tabindex="-1"></div>
+							<div class="gridCellCandidate" id="C65_5" data-content="5" tabindex="-1"></div>
+							<div class="gridCellCandidate" id="C65_6" data-content="6" tabindex="-1"></div>
+							<div style="clear: both;"></div>
+							<div class="gridCellCandidate" id="C65_7" data-content="7" tabindex="-1"></div>
+							<div class="gridCellCandidate" id="C65_8" data-content="8" tabindex="-1"></div>
+							<div class="gridCellCandidate" id="C65_9" data-content="9" tabindex="-1"></div>
+							<div style="clear: both;"></div>
+						</div>
+					</div>
+					<div class="gridCell border cl ct cell" id="C66" tabindex="66" data-row="8" data-column="3" data-box="7" data-neighbour-above-id="57" data-neighbour-below-id="75" data-neighbour-left-id="65" data-neighbour-right-id="67" data-posted="N">
+						<div id="C66_INPUT_CONTAINER" class="gridCellInputContainer" style="display: none;">
+							<div class="gridCellValue"></div>
+						</div>
+
+						<div id="C66_CANDIDATE_CONTAINER" class="gridCellCandidateContainer" style="display: block;">
+							<div class="gridCellCandidate" id="C66_1" data-content="1" tabindex="-1"></div>
+							<div class="gridCellCandidate" id="C66_2" data-content="2" tabindex="-1">2</div>
+							<div class="gridCellCandidate" id="C66_3" data-content="3" tabindex="-1"></div>
+							<div style="clear: both;"></div>
+							<div class="gridCellCandidate" id="C66_4" data-content="4" tabindex="-1">4</div>
+							<div class="gridCellCandidate" id="C66_5" data-content="5" tabindex="-1"></div>
+							<div class="gridCellCandidate" id="C66_6" data-content="6" tabindex="-1"></div>
+							<div style="clear: both;"></div>
+							<div class="gridCellCandidate" id="C66_7" data-content="7" tabindex="-1">7</div>
+							<div class="gridCellCandidate" id="C66_8" data-content="8" tabindex="-1"></div>
+							<div class="gridCellCandidate" id="C66_9" data-content="9" tabindex="-1"></div>
+							<div style="clear: both;"></div>
+						</div>
+					</div>
+					<div class="gridCell border bl ct cell" id="C67" tabindex="67" data-row="8" data-column="4" data-box="8" data-neighbour-above-id="58" data-neighbour-below-id="76" data-neighbour-left-id="66" data-neighbour-right-id="68" data-posted="N">
+						<div id="C67_INPUT_CONTAINER" class="gridCellInputContainer" style="display: none;">
+							<div class="gridCellValue"></div>
+						</div>
+
+						<div id="C67_CANDIDATE_CONTAINER" class="gridCellCandidateContainer" style="display: block;">
+							<div class="gridCellCandidate" id="C67_1" data-content="1" tabindex="-1">1</div>
+							<div class="gridCellCandidate" id="C67_2" data-content="2" tabindex="-1"></div>
+							<div class="gridCellCandidate" id="C67_3" data-content="3" tabindex="-1"></div>
+							<div style="clear: both;"></div>
+							<div class="gridCellCandidate" id="C67_4" data-content="4" tabindex="-1"></div>
+							<div class="gridCellCandidate" id="C67_5" data-content="5" tabindex="-1"></div>
+							<div class="gridCellCandidate" id="C67_6" data-content="6" tabindex="-1"></div>
+							<div style="clear: both;"></div>
+							<div class="gridCellCandidate" id="C67_7" data-content="7" tabindex="-1">7</div>
+							<div class="gridCellCandidate" id="C67_8" data-content="8" tabindex="-1"></div>
+							<div class="gridCellCandidate" id="C67_9" data-content="9" tabindex="-1"></div>
+							<div style="clear: both;"></div>
+						</div>
+					</div>
+					<div class="gridCell border cl ct inputcell" id="C68" tabindex="68" data-row="8" data-column="5" data-box="8" data-neighbour-above-id="59" data-neighbour-below-id="77" data-neighbour-left-id="67" data-neighbour-right-id="69" data-posted="Y">
+						<div id="C68_INPUT_CONTAINER" class="gridCellInputContainer" style="display: block;">
+							<div class="gridCellValue">8</div>
+						</div>
+
+						<div id="C68_CANDIDATE_CONTAINER" class="gridCellCandidateContainer" style="display: none;">
+							<div class="gridCellCandidate" id="C68_1" data-content="1" tabindex="-1"></div>
+							<div class="gridCellCandidate" id="C68_2" data-content="2" tabindex="-1"></div>
+							<div class="gridCellCandidate" id="C68_3" data-content="3" tabindex="-1"></div>
+							<div style="clear: both;"></div>
+							<div class="gridCellCandidate" id="C68_4" data-content="4" tabindex="-1"></div>
+							<div class="gridCellCandidate" id="C68_5" data-content="5" tabindex="-1"></div>
+							<div class="gridCellCandidate" id="C68_6" data-content="6" tabindex="-1"></div>
+							<div style="clear: both;"></div>
+							<div class="gridCellCandidate" id="C68_7" data-content="7" tabindex="-1"></div>
+							<div class="gridCellCandidate" id="C68_8" data-content="8" tabindex="-1"></div>
+							<div class="gridCellCandidate" id="C68_9" data-content="9" tabindex="-1"></div>
+							<div style="clear: both;"></div>
+						</div>
+					</div>
+					<div class="gridCell border cl ct inputcell" id="C69" tabindex="69" data-row="8" data-column="6" data-box="8" data-neighbour-above-id="60" data-neighbour-below-id="78" data-neighbour-left-id="68" data-neighbour-right-id="70" data-posted="Y">
+						<div id="C69_INPUT_CONTAINER" class="gridCellInputContainer" style="display: block;">
+							<div class="gridCellValue">6</div>
+						</div>
+
+						<div id="C69_CANDIDATE_CONTAINER" class="gridCellCandidateContainer" style="display: none;">
+							<div class="gridCellCandidate" id="C69_1" data-content="1" tabindex="-1"></div>
+							<div class="gridCellCandidate" id="C69_2" data-content="2" tabindex="-1"></div>
+							<div class="gridCellCandidate" id="C69_3" data-content="3" tabindex="-1"></div>
+							<div style="clear: both;"></div>
+							<div class="gridCellCandidate" id="C69_4" data-content="4" tabindex="-1"></div>
+							<div class="gridCellCandidate" id="C69_5" data-content="5" tabindex="-1"></div>
+							<div class="gridCellCandidate" id="C69_6" data-content="6" tabindex="-1"></div>
+							<div style="clear: both;"></div>
+							<div class="gridCellCandidate" id="C69_7" data-content="7" tabindex="-1"></div>
+							<div class="gridCellCandidate" id="C69_8" data-content="8" tabindex="-1"></div>
+							<div class="gridCellCandidate" id="C69_9" data-content="9" tabindex="-1"></div>
+							<div style="clear: both;"></div>
+						</div>
+					</div>
+					<div class="gridCell border bl ct inputcell" id="C70" tabindex="70" data-row="8" data-column="7" data-box="9" data-neighbour-above-id="61" data-neighbour-below-id="79" data-neighbour-left-id="69" data-neighbour-right-id="71" data-posted="Y">
+						<div id="C70_INPUT_CONTAINER" class="gridCellInputContainer" style="display: block;">
+							<div class="gridCellValue">3</div>
+						</div>
+
+						<div id="C70_CANDIDATE_CONTAINER" class="gridCellCandidateContainer" style="display: none;">
+							<div class="gridCellCandidate" id="C70_1" data-content="1" tabindex="-1"></div>
+							<div class="gridCellCandidate" id="C70_2" data-content="2" tabindex="-1"></div>
+							<div class="gridCellCandidate" id="C70_3" data-content="3" tabindex="-1"></div>
+							<div style="clear: both;"></div>
+							<div class="gridCellCandidate" id="C70_4" data-content="4" tabindex="-1"></div>
+							<div class="gridCellCandidate" id="C70_5" data-content="5" tabindex="-1"></div>
+							<div class="gridCellCandidate" id="C70_6" data-content="6" tabindex="-1"></div>
+							<div style="clear: both;"></div>
+							<div class="gridCellCandidate" id="C70_7" data-content="7" tabindex="-1"></div>
+							<div class="gridCellCandidate" id="C70_8" data-content="8" tabindex="-1"></div>
+							<div class="gridCellCandidate" id="C70_9" data-content="9" tabindex="-1"></div>
+							<div style="clear: both;"></div>
+						</div>
+					</div>
+					<div class="gridCell border cl ct inputcell" id="C71" tabindex="71" data-row="8" data-column="8" data-box="9" data-neighbour-above-id="62" data-neighbour-below-id="80" data-neighbour-left-id="70" data-neighbour-right-id="72" data-posted="Y">
+						<div id="C71_INPUT_CONTAINER" class="gridCellInputContainer" style="display: block;">
+							<div class="gridCellValue">5</div>
+						</div>
+
+						<div id="C71_CANDIDATE_CONTAINER" class="gridCellCandidateContainer" style="display: none;">
+							<div class="gridCellCandidate" id="C71_1" data-content="1" tabindex="-1"></div>
+							<div class="gridCellCandidate" id="C71_2" data-content="2" tabindex="-1"></div>
+							<div class="gridCellCandidate" id="C71_3" data-content="3" tabindex="-1"></div>
+							<div style="clear: both;"></div>
+							<div class="gridCellCandidate" id="C71_4" data-content="4" tabindex="-1"></div>
+							<div class="gridCellCandidate" id="C71_5" data-content="5" tabindex="-1"></div>
+							<div class="gridCellCandidate" id="C71_6" data-content="6" tabindex="-1"></div>
+							<div style="clear: both;"></div>
+							<div class="gridCellCandidate" id="C71_7" data-content="7" tabindex="-1"></div>
+							<div class="gridCellCandidate" id="C71_8" data-content="8" tabindex="-1"></div>
+							<div class="gridCellCandidate" id="C71_9" data-content="9" tabindex="-1"></div>
+							<div style="clear: both;"></div>
+						</div>
+					</div>
+					<div class="gridCell border cl gr ct cell" id="C72" tabindex="72" data-row="8" data-column="9" data-box="9" data-neighbour-above-id="63" data-neighbour-below-id="81" data-neighbour-left-id="71" data-neighbour-right-id="73" data-posted="N">
+						<div id="C72_INPUT_CONTAINER" class="gridCellInputContainer" style="display: none;">
+							<div class="gridCellValue"></div>
+						</div>
+
+						<div id="C72_CANDIDATE_CONTAINER" class="gridCellCandidateContainer" style="display: block;">
+							<div class="gridCellCandidate" id="C72_1" data-content="1" tabindex="-1">1</div>
+							<div class="gridCellCandidate" id="C72_2" data-content="2" tabindex="-1">2</div>
+							<div class="gridCellCandidate" id="C72_3" data-content="3" tabindex="-1"></div>
+							<div style="clear: both;"></div>
+							<div class="gridCellCandidate" id="C72_4" data-content="4" tabindex="-1"></div>
+							<div class="gridCellCandidate" id="C72_5" data-content="5" tabindex="-1"></div>
+							<div class="gridCellCandidate" id="C72_6" data-content="6" tabindex="-1"></div>
+							<div style="clear: both;"></div>
+							<div class="gridCellCandidate" id="C72_7" data-content="7" tabindex="-1">7</div>
+							<div class="gridCellCandidate" id="C72_8" data-content="8" tabindex="-1"></div>
+							<div class="gridCellCandidate" id="C72_9" data-content="9" tabindex="-1"></div>
+							<div style="clear: both;"></div>
+						</div>
+					</div>
+				</div>
+				<div style="clear: both;"></div>
+				<div class="gridRow" align="center">
+					<div class="gridCell border gl ct gb inputcell" id="C73" tabindex="73" data-row="9" data-column="1" data-box="7" data-neighbour-above-id="64" data-neighbour-below-id="1" data-neighbour-left-id="72" data-neighbour-right-id="74" data-posted="Y">
+						<div id="C73_INPUT_CONTAINER" class="gridCellInputContainer" style="display: block;">
+							<div class="gridCellValue">1</div>
+						</div>
+
+						<div id="C73_CANDIDATE_CONTAINER" class="gridCellCandidateContainer" style="display: none;">
+							<div class="gridCellCandidate" id="C73_1" data-content="1" tabindex="-1"></div>
+							<div class="gridCellCandidate" id="C73_2" data-content="2" tabindex="-1"></div>
+							<div class="gridCellCandidate" id="C73_3" data-content="3" tabindex="-1"></div>
+							<div style="clear: both;"></div>
+							<div class="gridCellCandidate" id="C73_4" data-content="4" tabindex="-1"></div>
+							<div class="gridCellCandidate" id="C73_5" data-content="5" tabindex="-1"></div>
+							<div class="gridCellCandidate" id="C73_6" data-content="6" tabindex="-1"></div>
+							<div style="clear: both;"></div>
+							<div class="gridCellCandidate" id="C73_7" data-content="7" tabindex="-1"></div>
+							<div class="gridCellCandidate" id="C73_8" data-content="8" tabindex="-1"></div>
+							<div class="gridCellCandidate" id="C73_9" data-content="9" tabindex="-1"></div>
+							<div style="clear: both;"></div>
+						</div>
+					</div>
+					<div class="gridCell border cl ct gb cell" id="C74" tabindex="74" data-row="9" data-column="2" data-box="7" data-neighbour-above-id="65" data-neighbour-below-id="2" data-neighbour-left-id="73" data-neighbour-right-id="75" data-posted="N">
+						<div id="C74_INPUT_CONTAINER" class="gridCellInputContainer" style="display: none;">
+							<div class="gridCellValue"></div>
+						</div>
+
+						<div id="C74_CANDIDATE_CONTAINER" class="gridCellCandidateContainer" style="display: block;">
+							<div class="gridCellCandidate" id="C74_1" data-content="1" tabindex="-1"></div>
+							<div class="gridCellCandidate" id="C74_2" data-content="2" tabindex="-1"></div>
+							<div class="gridCellCandidate" id="C74_3" data-content="3" tabindex="-1">3</div>
+							<div style="clear: both;"></div>
+							<div class="gridCellCandidate" id="C74_4" data-content="4" tabindex="-1"></div>
+							<div class="gridCellCandidate" id="C74_5" data-content="5" tabindex="-1"></div>
+							<div class="gridCellCandidate" id="C74_6" data-content="6" tabindex="-1">6</div>
+							<div style="clear: both;"></div>
+							<div class="gridCellCandidate" id="C74_7" data-content="7" tabindex="-1">7</div>
+							<div class="gridCellCandidate" id="C74_8" data-content="8" tabindex="-1"></div>
+							<div class="gridCellCandidate" id="C74_9" data-content="9" tabindex="-1"></div>
+							<div style="clear: both;"></div>
+						</div>
+					</div>
+					<div class="gridCell border cl ct gb cell" id="C75" tabindex="75" data-row="9" data-column="3" data-box="7" data-neighbour-above-id="66" data-neighbour-below-id="3" data-neighbour-left-id="74" data-neighbour-right-id="76" data-posted="N">
+						<div id="C75_INPUT_CONTAINER" class="gridCellInputContainer" style="display: none;">
+							<div class="gridCellValue"></div>
+						</div>
+
+						<div id="C75_CANDIDATE_CONTAINER" class="gridCellCandidateContainer" style="display: block;">
+							<div class="gridCellCandidate" id="C75_1" data-content="1" tabindex="-1"></div>
+							<div class="gridCellCandidate" id="C75_2" data-content="2" tabindex="-1">2</div>
+							<div class="gridCellCandidate" id="C75_3" data-content="3" tabindex="-1"></div>
+							<div style="clear: both;"></div>
+							<div class="gridCellCandidate" id="C75_4" data-content="4" tabindex="-1"></div>
+							<div class="gridCellCandidate" id="C75_5" data-content="5" tabindex="-1"></div>
+							<div class="gridCellCandidate" id="C75_6" data-content="6" tabindex="-1">6</div>
+							<div style="clear: both;"></div>
+							<div class="gridCellCandidate" id="C75_7" data-content="7" tabindex="-1">7</div>
+							<div class="gridCellCandidate" id="C75_8" data-content="8" tabindex="-1"></div>
+							<div class="gridCellCandidate" id="C75_9" data-content="9" tabindex="-1"></div>
+							<div style="clear: both;"></div>
+						</div>
+					</div>
+					<div class="gridCell border bl ct gb inputcell" id="C76" tabindex="76" data-row="9" data-column="4" data-box="8" data-neighbour-above-id="67" data-neighbour-below-id="4" data-neighbour-left-id="75" data-neighbour-right-id="77" data-posted="Y">
+						<div id="C76_INPUT_CONTAINER" class="gridCellInputContainer" style="display: block;">
+							<div class="gridCellValue">4</div>
+						</div>
+
+						<div id="C76_CANDIDATE_CONTAINER" class="gridCellCandidateContainer" style="display: none;">
+							<div class="gridCellCandidate" id="C76_1" data-content="1" tabindex="-1"></div>
+							<div class="gridCellCandidate" id="C76_2" data-content="2" tabindex="-1"></div>
+							<div class="gridCellCandidate" id="C76_3" data-content="3" tabindex="-1"></div>
+							<div style="clear: both;"></div>
+							<div class="gridCellCandidate" id="C76_4" data-content="4" tabindex="-1"></div>
+							<div class="gridCellCandidate" id="C76_5" data-content="5" tabindex="-1"></div>
+							<div class="gridCellCandidate" id="C76_6" data-content="6" tabindex="-1"></div>
+							<div style="clear: both;"></div>
+							<div class="gridCellCandidate" id="C76_7" data-content="7" tabindex="-1"></div>
+							<div class="gridCellCandidate" id="C76_8" data-content="8" tabindex="-1"></div>
+							<div class="gridCellCandidate" id="C76_9" data-content="9" tabindex="-1"></div>
+							<div style="clear: both;"></div>
+						</div>
+					</div>
+					<div class="gridCell border cl ct gb inputcell" id="C77" tabindex="77" data-row="9" data-column="5" data-box="8" data-neighbour-above-id="68" data-neighbour-below-id="5" data-neighbour-left-id="76" data-neighbour-right-id="78" data-posted="Y">
+						<div id="C77_INPUT_CONTAINER" class="gridCellInputContainer" style="display: block;">
+							<div class="gridCellValue">5</div>
+						</div>
+
+						<div id="C77_CANDIDATE_CONTAINER" class="gridCellCandidateContainer" style="display: none;">
+							<div class="gridCellCandidate" id="C77_1" data-content="1" tabindex="-1"></div>
+							<div class="gridCellCandidate" id="C77_2" data-content="2" tabindex="-1"></div>
+							<div class="gridCellCandidate" id="C77_3" data-content="3" tabindex="-1"></div>
+							<div style="clear: both;"></div>
+							<div class="gridCellCandidate" id="C77_4" data-content="4" tabindex="-1"></div>
+							<div class="gridCellCandidate" id="C77_5" data-content="5" tabindex="-1"></div>
+							<div class="gridCellCandidate" id="C77_6" data-content="6" tabindex="-1"></div>
+							<div style="clear: both;"></div>
+							<div class="gridCellCandidate" id="C77_7" data-content="7" tabindex="-1"></div>
+							<div class="gridCellCandidate" id="C77_8" data-content="8" tabindex="-1"></div>
+							<div class="gridCellCandidate" id="C77_9" data-content="9" tabindex="-1"></div>
+							<div style="clear: both;"></div>
+						</div>
+					</div>
+					<div class="gridCell border cl ct gb cell" id="C78" tabindex="78" data-row="9" data-column="6" data-box="8" data-neighbour-above-id="69" data-neighbour-below-id="6" data-neighbour-left-id="77" data-neighbour-right-id="79" data-posted="N">
+						<div id="C78_INPUT_CONTAINER" class="gridCellInputContainer" style="display: none;">
+							<div class="gridCellValue"></div>
+						</div>
+						<div id="C78_CANDIDATE_CONTAINER" class="gridCellCandidateContainer" style="display: block;">
+							<div class="gridCellCandidate" id="C78_1" data-content="1" tabindex="-1"></div>
+							<div class="gridCellCandidate" id="C78_2" data-content="2" tabindex="-1">2</div>
+							<div class="gridCellCandidate" id="C78_3" data-content="3" tabindex="-1"></div>
+							<div style="clear: both;"></div>
+							<div class="gridCellCandidate" id="C78_4" data-content="4" tabindex="-1"></div>
+							<div class="gridCellCandidate" id="C78_5" data-content="5" tabindex="-1"></div>
+							<div class="gridCellCandidate" id="C78_6" data-content="6" tabindex="-1"></div>
+							<div style="clear: both;"></div>
+							<div class="gridCellCandidate" id="C78_7" data-content="7" tabindex="-1">7</div>
+							<div class="gridCellCandidate" id="C78_8" data-content="8" tabindex="-1"></div>
+							<div class="gridCellCandidate" id="C78_9" data-content="9" tabindex="-1">9</div>
+							<div style="clear: both;"></div>
+						</div>
+					</div>
+					<div class="gridCell border bl ct gb inputcell" id="C79" tabindex="79" data-row="9" data-column="7" data-box="9" data-neighbour-above-id="70" data-neighbour-below-id="7" data-neighbour-left-id="78" data-neighbour-right-id="80" data-posted="Y">
+						<div id="C79_INPUT_CONTAINER" class="gridCellInputContainer" style="display: block;">
+							<div class="gridCellValue">8</div>
+						</div>
+						<div id="C79_CANDIDATE_CONTAINER" class="gridCellCandidateContainer" style="display: none;">
+							<div class="gridCellCandidate" id="C79_1" data-content="1" tabindex="-1"></div>
+							<div class="gridCellCandidate" id="C79_2" data-content="2" tabindex="-1"></div>
+							<div class="gridCellCandidate" id="C79_3" data-content="3" tabindex="-1"></div>
+							<div style="clear: both;"></div>
+							<div class="gridCellCandidate" id="C79_4" data-content="4" tabindex="-1"></div>
+							<div class="gridCellCandidate" id="C79_5" data-content="5" tabindex="-1"></div>
+							<div class="gridCellCandidate" id="C79_6" data-content="6" tabindex="-1"></div>
+							<div style="clear: both;"></div>
+							<div class="gridCellCandidate" id="C79_7" data-content="7" tabindex="-1"></div>
+							<div class="gridCellCandidate" id="C79_8" data-content="8" tabindex="-1"></div>
+							<div class="gridCellCandidate" id="C79_9" data-content="9" tabindex="-1"></div>
+							<div style="clear: both;"></div>
+						</div>
+					</div>
+					<div class="gridCell border cl ct gb cell" id="C80" tabindex="80" data-row="9" data-column="8" data-box="9" data-neighbour-above-id="71" data-neighbour-below-id="8" data-neighbour-left-id="79" data-neighbour-right-id="81" data-posted="N">
+						<div id="C80_INPUT_CONTAINER" class="gridCellInputContainer" style="display: none;">
+							<div class="gridCellValue"></div>
+						</div>
+						<div id="C80_CANDIDATE_CONTAINER" class="gridCellCandidateContainer" style="display: block;">
+							<div class="gridCellCandidate" id="C80_1" data-content="1" tabindex="-1"></div>
+							<div class="gridCellCandidate" id="C80_2" data-content="2" tabindex="-1"></div>
+							<div class="gridCellCandidate" id="C80_3" data-content="3" tabindex="-1"></div>
+							<div style="clear: both;"></div>
+							<div class="gridCellCandidate" id="C80_4" data-content="4" tabindex="-1"></div>
+							<div class="gridCellCandidate" id="C80_5" data-content="5" tabindex="-1"></div>
+							<div class="gridCellCandidate" id="C80_6" data-content="6" tabindex="-1">6</div>
+							<div style="clear: both;"></div>
+							<div class="gridCellCandidate" id="C80_7" data-content="7" tabindex="-1"></div>
+							<div class="gridCellCandidate" id="C80_8" data-content="8" tabindex="-1"></div>
+							<div class="gridCellCandidate" id="C80_9" data-content="9" tabindex="-1">9</div>
+							<div style="clear: both;"></div>
+						</div>
+					</div>
+					<div class="gridCell border cl gr ct gb cell" id="C81" tabindex="81" data-row="9" data-column="9" data-box="9" data-neighbour-above-id="72" data-neighbour-below-id="9" data-neighbour-left-id="80" data-neighbour-right-id="1" data-posted="N">
+						<div id="C81_INPUT_CONTAINER" class="gridCellInputContainer" style="display: none;">
+							<div class="gridCellValue"></div>
+						</div>
+						<div id="C81_CANDIDATE_CONTAINER" class="gridCellCandidateContainer" style="display: block;">
+							<div class="gridCellCandidate" id="C81_1" data-content="1" tabindex="-1"></div>
+							<div class="gridCellCandidate" id="C81_2" data-content="2" tabindex="-1">2</div>
+							<div class="gridCellCandidate" id="C81_3" data-content="3" tabindex="-1"></div>
+							<div style="clear: both;"></div>
+							<div class="gridCellCandidate" id="C81_4" data-content="4" tabindex="-1"></div>
+							<div class="gridCellCandidate" id="C81_5" data-content="5" tabindex="-1"></div>
+							<div class="gridCellCandidate" id="C81_6" data-content="6" tabindex="-1"></div>
+							<div style="clear: both;"></div>
+							<div class="gridCellCandidate" id="C81_7" data-content="7" tabindex="-1">7</div>
+							<div class="gridCellCandidate" id="C81_8" data-content="8" tabindex="-1"></div>
+							<div class="gridCellCandidate" id="C81_9" data-content="9" tabindex="-1">9</div>
+							<div style="clear: both;"></div>
+						</div>
+					</div>
+				</div>
+				<div style="clear: both;"></div>
+			</div>
+			<br />
+		</div>
+		<script>
+			var numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+			var candidates = [[1, 2, 3, 4, 5, 6, 7, 8, 9]];
+
+			//Reset
+			for (i = 1; i < 82; i++) {
+				for (ii = 1; ii < 10; ii++) {
+					$("div#C" + i + "_" + ii).text("");
+				}
+				$("div#C" + i + "_INPUT_CONTAINER").show(); //.css("display", "block");
+				$("div#C" + i + "_CANDIDATE_CONTAINER").hide(); //.css("display", "none");
+				$("div#C" + i + "_INPUT_CONTAINER div").text("");
+			}
+		</script>
+	</body>
+</html>
