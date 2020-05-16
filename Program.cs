@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Threading.Tasks;
 
 namespace sudoku_solver
 {
@@ -6,6 +7,16 @@ namespace sudoku_solver
 	{
 		static void Main(string[] args)
 		{
+			var task = new Task(async () =>
+			{
+				var server = new Server();
+				await server.ReceiveConnection();
+			});
+			task.Start();
+			Task.WaitAll(task);
+
+			// var server = new Server();
+			// server.Start();
 			//Normal
 			//var fieldString = "670002004000700806089050700900103070007080300030205009006090280701008000800600097";
 			//Easy

@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System;
+using System.IO;
 
 namespace sudoku_solver
 {
@@ -87,6 +88,64 @@ namespace sudoku_solver
 						FindNakedPair(pos.Pos, pos.BoxIndex);
 						FindNakedPair(pos.Pos, pos.RowIndex);
 						FindNakedPair(pos.Pos, pos.ColumnIndex);
+
+						FindNakedTriple(pos.Pos, pos.BoxIndex);
+						FindNakedTriple(pos.Pos, pos.RowIndex);
+						FindNakedTriple(pos.Pos, pos.ColumnIndex);
+
+						//var text = File.ReadAllText("visulizer.html");
+
+						//text = text.Replace("{{NUMBERS}}", "[" + string.Join(",", _field) + "]");
+
+						//var candidates = _candidates.Keys.OrderBy(item => item).Select(item => "[" + string.Join(",", _candidates[item]) + "]");
+						//text = text.Replace("{{CANDIDATES}}", "[" + string.Join(",", candidates) + "]");
+						//File.WriteAllText("visulizer_working.html", text);
+						///Console.WriteLine($"Index: {index}, Pos: {pos}");
+						//Console.ReadLine();
+					}
+				}
+			}
+		}
+
+		private void FindNakedTriple(int pos, IEnumerable<int> indexList)
+		{
+			if (_candidates[pos].Count != 3)
+			{
+				return;
+			}
+			var nakedTripleIndex = new List<int>();
+			nakedTripleIndex.Add(pos);
+			foreach (var index in indexList)
+			{
+				if (index == pos)
+				{
+					break;
+				}
+				if (_candidates[index].Count() < 2 || _candidates[index].Count() > 3)
+				{
+					break;
+				}
+				if (_candidates[index].Except(_candidates[pos]).Count() > 1)
+				{
+					break;
+				}
+				nakedTripleIndex.Add(index);
+			}
+			if (nakedTripleIndex.Count() == 3)
+			{
+				var distinctList = _candidates[nakedTripleIndex[0]].Union(_candidates[nakedTripleIndex[1]]).Union(_candidates[nakedTripleIndex[2]]);
+				if (distinctList.Count() > 3)
+				{
+					return;
+				}
+				foreach (var index in indexList)
+				{
+					if (!nakedTripleIndex.Contains(index))
+					{
+						foreach (var candidateToRemove in distinctList)
+						{
+							_candidates[index].Remove(candidateToRemove);
+						}
 					}
 				}
 			}

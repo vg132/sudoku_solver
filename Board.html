@@ -1,0 +1,236 @@
+<html>
+	<head>
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous" />
+		<script src="https://code.jquery.com/jquery-3.5.0.min.js" integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ=" crossorigin="anonymous"></script>
+		<style>
+			input {
+				width: 100%;
+				height: 100%;
+				border: none;
+				font-size: 20px;
+				font-weight: bold;
+				text-align: center;
+			}
+			table {
+				border: 2px solid #000;
+			}
+			td {
+				border: 1px solid #000;
+				width: 50px;
+				height: 50px;
+			}
+			td:nth-of-type(3n) {
+				border-right: 2px solid #000;
+			}
+			tr:nth-of-type(3n) {
+				border-bottom: 2px solid #000;
+			}
+			td.candidates {
+				padding: 0 10px 0 10px;
+				font-size: 10px;
+			}
+			td.candidates input {
+				display: none;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="container">
+			<div class="mx-auto mt-5" style="width: 451px;">
+				<table>
+					<tr id="row_1">
+						<td id="cell_1"><input type="text" maxlength="1" /></td>
+						<td id="cell_2"><input type="text" maxlength="1" /></td>
+						<td id="cell_3"><input type="text" maxlength="1" /></td>
+						<td id="cell_4"><input type="text" maxlength="1" /></td>
+						<td id="cell_5"><input type="text" maxlength="1" /></td>
+						<td id="cell_6"><input type="text" maxlength="1" /></td>
+						<td id="cell_7"><input type="text" maxlength="1" /></td>
+						<td id="cell_8"><input type="text" maxlength="1" /></td>
+						<td id="cell_9"><input type="text" maxlength="1" /></td>
+					</tr>
+					<tr id="row_2">
+						<td id="cell_10"><input type="text" maxlength="1" /></td>
+						<td id="cell_11"><input type="text" maxlength="1" /></td>
+						<td id="cell_12"><input type="text" maxlength="1" /></td>
+						<td id="cell_13"><input type="text" maxlength="1" /></td>
+						<td id="cell_14"><input type="text" maxlength="1" /></td>
+						<td id="cell_15"><input type="text" maxlength="1" /></td>
+						<td id="cell_16"><input type="text" maxlength="1" /></td>
+						<td id="cell_17"><input type="text" maxlength="1" /></td>
+						<td id="cell_18"><input type="text" maxlength="1" /></td>
+					</tr>
+					<tr id="row_4">
+						<td id="cell_19"><input type="text" maxlength="1" /></td>
+						<td id="cell_20"><input type="text" maxlength="1" /></td>
+						<td id="cell_21"><input type="text" maxlength="1" /></td>
+						<td id="cell_22"><input type="text" maxlength="1" /></td>
+						<td id="cell_23"><input type="text" maxlength="1" /></td>
+						<td id="cell_24"><input type="text" maxlength="1" /></td>
+						<td id="cell_25"><input type="text" maxlength="1" /></td>
+						<td id="cell_26"><input type="text" maxlength="1" /></td>
+						<td id="cell_27"><input type="text" maxlength="1" /></td>
+					</tr>
+					<tr id="row_5">
+						<td id="cell_28"><input type="text" maxlength="1" /></td>
+						<td id="cell_29"><input type="text" maxlength="1" /></td>
+						<td id="cell_30"><input type="text" maxlength="1" /></td>
+						<td id="cell_31"><input type="text" maxlength="1" /></td>
+						<td id="cell_32"><input type="text" maxlength="1" /></td>
+						<td id="cell_33"><input type="text" maxlength="1" /></td>
+						<td id="cell_34"><input type="text" maxlength="1" /></td>
+						<td id="cell_35"><input type="text" maxlength="1" /></td>
+						<td id="cell_36"><input type="text" maxlength="1" /></td>
+					</tr>
+					<tr id="row_6">
+						<td id="cell_37"><input type="text" maxlength="1" /></td>
+						<td id="cell_38"><input type="text" maxlength="1" /></td>
+						<td id="cell_39"><input type="text" maxlength="1" /></td>
+						<td id="cell_40"><input type="text" maxlength="1" /></td>
+						<td id="cell_41"><input type="text" maxlength="1" /></td>
+						<td id="cell_42"><input type="text" maxlength="1" /></td>
+						<td id="cell_43"><input type="text" maxlength="1" /></td>
+						<td id="cell_44"><input type="text" maxlength="1" /></td>
+						<td id="cell_45"><input type="text" maxlength="1" /></td>
+					</tr>
+					<tr id="row_7">
+						<td id="cell_46"><input type="text" maxlength="1" /></td>
+						<td id="cell_47"><input type="text" maxlength="1" /></td>
+						<td id="cell_48"><input type="text" maxlength="1" /></td>
+						<td id="cell_49"><input type="text" maxlength="1" /></td>
+						<td id="cell_50"><input type="text" maxlength="1" /></td>
+						<td id="cell_51"><input type="text" maxlength="1" /></td>
+						<td id="cell_52"><input type="text" maxlength="1" /></td>
+						<td id="cell_53"><input type="text" maxlength="1" /></td>
+						<td id="cell_54"><input type="text" maxlength="1" /></td>
+					</tr>
+					<tr id="row_8">
+						<td id="cell_55"><input type="text" maxlength="1" /></td>
+						<td id="cell_56"><input type="text" maxlength="1" /></td>
+						<td id="cell_57"><input type="text" maxlength="1" /></td>
+						<td id="cell_58"><input type="text" maxlength="1" /></td>
+						<td id="cell_59"><input type="text" maxlength="1" /></td>
+						<td id="cell_60"><input type="text" maxlength="1" /></td>
+						<td id="cell_61"><input type="text" maxlength="1" /></td>
+						<td id="cell_62"><input type="text" maxlength="1" /></td>
+						<td id="cell_63"><input type="text" maxlength="1" /></td>
+					</tr>
+					<tr id="row_9">
+						<td id="cell_64"><input type="text" maxlength="1" /></td>
+						<td id="cell_65"><input type="text" maxlength="1" /></td>
+						<td id="cell_66"><input type="text" maxlength="1" /></td>
+						<td id="cell_67"><input type="text" maxlength="1" /></td>
+						<td id="cell_68"><input type="text" maxlength="1" /></td>
+						<td id="cell_69"><input type="text" maxlength="1" /></td>
+						<td id="cell_70"><input type="text" maxlength="1" /></td>
+						<td id="cell_71"><input type="text" maxlength="1" /></td>
+						<td id="cell_72"><input type="text" maxlength="1" /></td>
+					</tr>
+					<tr id="row_10">
+						<td id="cell_73"><input type="text" maxlength="1" /></td>
+						<td id="cell_74"><input type="text" maxlength="1" /></td>
+						<td id="cell_75"><input type="text" maxlength="1" /></td>
+						<td id="cell_76"><input type="text" maxlength="1" /></td>
+						<td id="cell_77"><input type="text" maxlength="1" /></td>
+						<td id="cell_78"><input type="text" maxlength="1" /></td>
+						<td id="cell_79"><input type="text" maxlength="1" /></td>
+						<td id="cell_80"><input type="text" maxlength="1" /></td>
+						<td id="cell_81"><input type="text" maxlength="1" /></td>
+					</tr>
+				</table>
+				<div class="mt-5">
+					<button class="btn btn-success js-start">Start</button>
+					<button class="btn btn-danger js-clear">Clear</button>
+					<button class="btn btn-success js-solve">Solve</button>
+					<button class="btn btn-primary js-step">Step</button>
+				</div>
+				<div class="mt-2">
+					<div class="alert alert-info js-alert" role="alert"></div>
+				</div>
+			</div>
+		</div>
+		<script>
+			$(".js-clear").click(function () {
+				$.each($("input"), function (index, value) {
+					$(this).val("");
+				});
+			});
+
+			//Setup
+			$.each($("input"), function (index, value) {
+				$(this).attr("tabindex", index + 1);
+				$(this).val(index);
+				$(this).keyup(function (e) {
+					if (e.keyCode > 47 && e.keyCode < 59) {
+						$(this).val("" + (e.keyCode - 48));
+						if ($(this).parent().next().length == 0) {
+							$($("input", $(this).parent().parent().next().first("td"))[0]).focus();
+						} else {
+							$("input", $(this).parent().next()).focus();
+						}
+					}
+				});
+			});
+
+			$(".js-start").click(function () {
+				var field = [];
+				$.each($("input"), function (index, value) {
+					field.push($(this).val());
+				});
+				doSend({ command: "start", field: field });
+			});
+
+			var startButton = $(".js-start");
+			var solveButton = $(".js-solve");
+			var stepButton = $(".js-step");
+			var wsUri = "ws://127.0.0.1:8080/";
+			var websocket = new WebSocket(wsUri);
+
+			this.send = function (message, callback) {
+				this.waitForConnection(function () {
+					websocket.send(message);
+					if (typeof callback !== "undefined") {
+						callback();
+					}
+				}, 1000);
+			};
+
+			function doSend(data) {
+				this.send(JSON.stringify(data));
+				//websocket.send(message);
+			}
+
+			this.waitForConnection = function (callback, interval) {
+				if (websocket.readyState === 1) {
+					callback();
+				} else {
+					var that = this;
+					// optional: implement backoff for interval here
+					setTimeout(function () {
+						that.waitForConnection(callback, interval);
+					}, interval);
+				}
+			};
+
+			websocket.onopen = function (e) {
+				writeToScreen("CONNECTED");
+			};
+
+			websocket.onerror = function (e) {
+				writeToScreen("Connection error: " + e.data);
+			};
+
+			websocket.onclose = function (e) {
+				writeToScreen("DISCONNECTED");
+			};
+
+			websocket.onopen = function (e) {
+				writeToScreen("CONNECTED");
+			};
+
+			function writeToScreen(message) {
+				$(".js-alert").append("<div>" + message + "</div>");
+			}
+		</script>
+	</body>
+</html>
