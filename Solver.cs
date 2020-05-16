@@ -5,26 +5,45 @@ using System.IO;
 
 namespace sudoku_solver
 {
-	public partial class Solver
+	public class Solver
 	{
-		private int[] _field;
-		private IDictionary<int, IList<int>> _candidates;
+		public int[] _field;
+		public IDictionary<int, IList<int>> _candidates;
 
-		public void Solve(string field)
+		public void Setup(IList<int> field)
 		{
-			_field = new int[81];
-			for (int i = 0; i < field.Length; i++)
-			{
-				_field[i] = int.Parse(field.Substring(i, 1));
-			}
-
+			_field = field.ToArray();
 			InitCandidates();
-			Console.WriteLine($"Unsolved: {_field.Where(item => item == 0).Count()}, Total candidates: {_candidates.Sum(item => item.Value.Count())}");
-			FindCandidates();
-			Console.WriteLine($"Is correct: {CheckIfCorrect()}");
-			Console.WriteLine($"Unsolved: {_field.Where(item => item == 0).Count()}, Total candidates: {_candidates.Sum(item => item.Value.Count())}");
-			DrawField();
 		}
+
+		public void Solve()
+		{
+			for (int i = 0; i < 200; i++)
+			{
+				FindCandidates();
+			}
+		}
+
+		public void Step()
+		{
+			FindCandidates();
+		}
+
+		//public void Solve(string field)
+		//{
+		// _field = new int[81];
+		// for (int i = 0; i < field.Length; i++)
+		// {
+		// 	_field[i] = int.Parse(field.Substring(i, 1));
+		// }
+
+		// InitCandidates();
+		// Console.WriteLine($"Unsolved: {_field.Where(item => item == 0).Count()}, Total candidates: {_candidates.Sum(item => item.Value.Count())}");
+		// FindCandidates();
+		// Console.WriteLine($"Is correct: {CheckIfCorrect()}");
+		// Console.WriteLine($"Unsolved: {_field.Where(item => item == 0).Count()}, Total candidates: {_candidates.Sum(item => item.Value.Count())}");
+		// DrawField();
+		//}
 
 		private bool CheckIfCorrect()
 		{
@@ -70,39 +89,26 @@ namespace sudoku_solver
 
 		private void FindCandidates()
 		{
-			for (int index = 0; index < 200; index++)
+			for (int i = 0; i < 81; i++)
 			{
-				for (int i = 0; i < 81; i++)
+				var pos = new Position(i);
+				if (_field[i] == 0)
 				{
-					var pos = new Position(i);
-					if (_field[i] == 0)
-					{
-						ClearCandidates(pos.Pos, pos.BoxIndex);
-						ClearCandidates(pos.Pos, pos.RowIndex);
-						ClearCandidates(pos.Pos, pos.ColumnIndex);
+					ClearCandidates(pos.Pos, pos.BoxIndex);
+					ClearCandidates(pos.Pos, pos.RowIndex);
+					ClearCandidates(pos.Pos, pos.ColumnIndex);
 
-						FindUniqueCandidates(pos.Pos, pos.BoxIndex);
-						FindUniqueCandidates(pos.Pos, pos.RowIndex);
-						FindUniqueCandidates(pos.Pos, pos.ColumnIndex);
+					FindUniqueCandidates(pos.Pos, pos.BoxIndex);
+					FindUniqueCandidates(pos.Pos, pos.RowIndex);
+					FindUniqueCandidates(pos.Pos, pos.ColumnIndex);
 
-						FindNakedPair(pos.Pos, pos.BoxIndex);
-						FindNakedPair(pos.Pos, pos.RowIndex);
-						FindNakedPair(pos.Pos, pos.ColumnIndex);
+					FindNakedPair(pos.Pos, pos.BoxIndex);
+					FindNakedPair(pos.Pos, pos.RowIndex);
+					FindNakedPair(pos.Pos, pos.ColumnIndex);
 
-						FindNakedTriple(pos.Pos, pos.BoxIndex);
-						FindNakedTriple(pos.Pos, pos.RowIndex);
-						FindNakedTriple(pos.Pos, pos.ColumnIndex);
-
-						//var text = File.ReadAllText("visulizer.html");
-
-						//text = text.Replace("{{NUMBERS}}", "[" + string.Join(",", _field) + "]");
-
-						//var candidates = _candidates.Keys.OrderBy(item => item).Select(item => "[" + string.Join(",", _candidates[item]) + "]");
-						//text = text.Replace("{{CANDIDATES}}", "[" + string.Join(",", candidates) + "]");
-						//File.WriteAllText("visulizer_working.html", text);
-						///Console.WriteLine($"Index: {index}, Pos: {pos}");
-						//Console.ReadLine();
-					}
+					FindNakedTriple(pos.Pos, pos.BoxIndex);
+					FindNakedTriple(pos.Pos, pos.RowIndex);
+					FindNakedTriple(pos.Pos, pos.ColumnIndex);
 				}
 			}
 		}
@@ -227,27 +233,6 @@ namespace sudoku_solver
 						}
 					}
 				}
-			}
-		}
-
-		public void DrawField()
-		{
-			Console.WriteLine();
-			Console.WriteLine("===================");
-			Console.WriteLine("====== Field ======");
-			Console.WriteLine();
-			for (int line = 0; line < 9; line++)
-			{
-				Console.Write("\n|");
-				DrawLine(line);
-			}
-		}
-
-		private void DrawLine(int line)
-		{
-			for (int i = 0; i < 9; i++)
-			{
-				Console.Write("{0}|", _field[(line * 9) + i]);
 			}
 		}
 	}
