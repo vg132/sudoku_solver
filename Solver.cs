@@ -102,13 +102,13 @@ namespace sudoku_solver
 					FindUniqueCandidates(pos.Pos, pos.RowIndex);
 					FindUniqueCandidates(pos.Pos, pos.ColumnIndex);
 
-					FindNakedPair(pos.Pos, pos.BoxIndex);
-					FindNakedPair(pos.Pos, pos.RowIndex);
-					FindNakedPair(pos.Pos, pos.ColumnIndex);
+					// FindNakedPair(pos.Pos, pos.BoxIndex);
+					// FindNakedPair(pos.Pos, pos.RowIndex);
+					// FindNakedPair(pos.Pos, pos.ColumnIndex);
 
-					FindNakedTriple(pos.Pos, pos.BoxIndex);
-					FindNakedTriple(pos.Pos, pos.RowIndex);
-					FindNakedTriple(pos.Pos, pos.ColumnIndex);
+					// FindNakedTriple(pos.Pos, pos.BoxIndex);
+					// FindNakedTriple(pos.Pos, pos.RowIndex);
+					// FindNakedTriple(pos.Pos, pos.ColumnIndex);
 				}
 			}
 		}
