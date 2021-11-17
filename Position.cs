@@ -19,9 +19,11 @@ namespace sudoku_solver
 		public override string ToString()
 		{
 			Console.WriteLine($"Pos: {Pos}, Row: {Row}, Column: {Column}, Block Row: {BlockRow}, Block Colum: {BlockColumn}");
+			Console.WriteLine($"Box index: {string.Join(",", BoxIndex)}");
 			Console.WriteLine($"Column index: {string.Join(",", ColumnIndex)}");
 			Console.WriteLine($"Row index: {string.Join(",", RowIndex)}");
-			Console.WriteLine($"BoxIndex: {string.Join(",", BoxIndex)}");
+			Console.WriteLine($"Box column index: {string.Join(",", BoxColumnIndex)}");
+			Console.WriteLine($"Box row index: {string.Join(",", BoxRowIndex)}");
 			Console.WriteLine();
 			return string.Empty;
 		}
@@ -47,6 +49,25 @@ namespace sudoku_solver
 			}
 		}
 
+		public IEnumerable<int> BoxRowIndex
+		{
+			get
+			{
+				return Enumerable.Range(Row * 9, 3);
+			}
+		}
+
+		public IEnumerable<int> BoxColumnIndex
+		{
+			get
+			{
+				for (int i = 0; i < 3; i++)
+				{
+					yield return Column + (i * 9);
+				}
+			}
+		}
+
 		public IEnumerable<int> RowIndex
 		{
 			get
@@ -59,9 +80,9 @@ namespace sudoku_solver
 		{
 			get
 			{
-				for (int i = Column; i < 81; i = i + 9)
+				for (int i = 0; i < 9; i++)
 				{
-					yield return i;
+					yield return Column + (i * 9);
 				}
 			}
 		}

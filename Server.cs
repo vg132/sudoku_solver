@@ -53,7 +53,6 @@ namespace sudoku_solver
 									Console.WriteLine("Unknown command");
 									break;
 							}
-							//await _webSocket.SendAsync(new ArraySegment<byte>(Encoding.UTF8.GetBytes(str)), WebSocketMessageType.Text, true, CancellationToken.None);
 						}
 					}
 				}

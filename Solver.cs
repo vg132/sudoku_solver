@@ -7,12 +7,14 @@ namespace sudoku_solver
 {
 	public class Solver
 	{
+		public IList<string> _steps = new List<string>();
 		public int[] _field;
 		public IDictionary<int, IList<int>> _candidates;
 
 		public void Setup(IList<int> field)
 		{
 			_field = field.ToArray();
+			_steps = new List<string>();
 			InitCandidates();
 		}
 
@@ -28,22 +30,6 @@ namespace sudoku_solver
 		{
 			FindCandidates();
 		}
-
-		//public void Solve(string field)
-		//{
-		// _field = new int[81];
-		// for (int i = 0; i < field.Length; i++)
-		// {
-		// 	_field[i] = int.Parse(field.Substring(i, 1));
-		// }
-
-		// InitCandidates();
-		// Console.WriteLine($"Unsolved: {_field.Where(item => item == 0).Count()}, Total candidates: {_candidates.Sum(item => item.Value.Count())}");
-		// FindCandidates();
-		// Console.WriteLine($"Is correct: {CheckIfCorrect()}");
-		// Console.WriteLine($"Unsolved: {_field.Where(item => item == 0).Count()}, Total candidates: {_candidates.Sum(item => item.Value.Count())}");
-		// DrawField();
-		//}
 
 		private bool CheckIfCorrect()
 		{
@@ -102,14 +88,51 @@ namespace sudoku_solver
 					FindUniqueCandidates(pos.Pos, pos.RowIndex);
 					FindUniqueCandidates(pos.Pos, pos.ColumnIndex);
 
-					// FindNakedPair(pos.Pos, pos.BoxIndex);
-					// FindNakedPair(pos.Pos, pos.RowIndex);
-					// FindNakedPair(pos.Pos, pos.ColumnIndex);
+					//FindBoxUniquePair(pos);
 
-					// FindNakedTriple(pos.Pos, pos.BoxIndex);
-					// FindNakedTriple(pos.Pos, pos.RowIndex);
-					// FindNakedTriple(pos.Pos, pos.ColumnIndex);
+					FindNakedPair(pos.Pos, pos.BoxIndex);
+					FindNakedPair(pos.Pos, pos.RowIndex);
+					FindNakedPair(pos.Pos, pos.ColumnIndex);
+
+					FindNakedTriple(pos.Pos, pos.BoxIndex);
+					FindNakedTriple(pos.Pos, pos.RowIndex);
+					FindNakedTriple(pos.Pos, pos.ColumnIndex);
 				}
+			}
+		}
+
+		private void FindBoxUniquePair(Position pos)
+		{
+			var candidates = new List<int>();
+			foreach (var index in pos.BoxRowIndex)
+			{
+				candidates.AddRange(_candidates[index]);
+			}
+			candidates = candidates.Distinct().ToList();
+			if (!candidates.Any())
+			{
+				return;
+			}
+
+			foreach (var index in pos.BoxIndex)
+			{
+				if (pos.BoxRowIndex.Contains(index))
+				{
+					continue;
+				}
+				candidates = candidates.Except(_candidates[index]).ToList();
+			}
+			if (!candidates.Any())
+			{
+				return;
+			}
+			foreach (var index in pos.RowIndex)
+			{
+				if (pos.BoxRowIndex.Contains(index))
+				{
+					continue;
+				}
+				candidates.ForEach(item => _candidates[index].Remove(item));
 			}
 		}
 
@@ -125,25 +148,21 @@ namespace sudoku_solver
 			{
 				if (index == pos)
 				{
-					break;
+					continue;
 				}
-				if (_candidates[index].Count() < 2 || _candidates[index].Count() > 3)
+				if (_candidates[index].Count() != 2 && _candidates[index].Count() != 3)
 				{
-					break;
+					continue;
 				}
-				if (_candidates[index].Except(_candidates[pos]).Count() > 1)
+				if (!_candidates[index].All(item => _candidates[pos].Contains(item)))
 				{
-					break;
+					continue;
 				}
 				nakedTripleIndex.Add(index);
 			}
 			if (nakedTripleIndex.Count() == 3)
 			{
-				var distinctList = _candidates[nakedTripleIndex[0]].Union(_candidates[nakedTripleIndex[1]]).Union(_candidates[nakedTripleIndex[2]]);
-				if (distinctList.Count() > 3)
-				{
-					return;
-				}
+				var distinctList = nakedTripleIndex.SelectMany(item => _candidates[item]).Distinct();
 				foreach (var index in indexList)
 				{
 					if (!nakedTripleIndex.Contains(index))
@@ -168,15 +187,15 @@ namespace sudoku_solver
 			{
 				if (index == pos)
 				{
-					break;
+					continue;
 				}
 				if (_candidates[index].Count != 2)
 				{
-					break;
+					continue;
 				}
 				if (_candidates[pos].Except(_candidates[index]).Any())
 				{
-					break;
+					continue;
 				}
 				nakedPairIndex = index;
 			}
@@ -211,6 +230,7 @@ namespace sudoku_solver
 				}
 				if (unique)
 				{
+					_steps.Add($"Unique candidate found for pos: {pos}, {candidate}");
 					_field[pos] = candidate;
 					_candidates[pos].Clear();
 				}
@@ -226,8 +246,10 @@ namespace sudoku_solver
 					if (_field[index] != 0)
 					{
 						_candidates[pos].Remove(_field[index]);
+						_steps.Add($"Removed candidate: {_field[index]} from pos {pos} because it's already unique in pos: {index}");
 						if (_candidates[pos].Count == 1)
 						{
+							_steps.Add($"Only one candidate for pos: {pos}, number must be {_candidates[pos].First()}");
 							_field[pos] = _candidates[pos].First();
 							_candidates[pos].Clear();
 						}
